@@ -1,0 +1,6539 @@
+{
+ "world": "heldout",
+ "seeds": [
+  977
+ ],
+ "fingerprint": "77fa8da56802bf48",
+ "designs": {
+  "status_quo": {
+   "label": "Status quo: append loads, weekly look, exact names, keyword rules, ingestion dates",
+   "er_pair_precision": {
+    "k": 3071,
+    "n": 3893,
+    "rate": 0.788851785255587,
+    "low": 0.7757496761869821,
+    "high": 0.8013843802755644
+   },
+   "er_pair_recall": {
+    "k": 3071,
+    "n": 5067,
+    "rate": 0.6060785474639826,
+    "low": 0.5925490883897226,
+    "high": 0.6194472792349335
+   },
+   "er_pair_recall_after_review": {
+    "k": 3071,
+    "n": 5067,
+    "rate": 0.6060785474639826,
+    "low": 0.5925490883897226,
+    "high": 0.6194472792349335
+   },
+   "rel_precision": {
+    "k": 1738,
+    "n": 2461,
+    "rate": 0.7062169849654611,
+    "low": 0.6879104636236958,
+    "high": 0.7238807038087266
+   },
+   "rel_accuracy_final": {
+    "k": 1738,
+    "n": 2461,
+    "rate": 0.7062169849654611,
+    "low": 0.6879104636236958,
+    "high": 0.7238807038087266
+   },
+   "rel_precision_ambiguous": {
+    "k": 0,
+    "n": 426,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.008937245720283937
+   },
+   "rel_precision_german": {
+    "k": 291,
+    "n": 452,
+    "rate": 0.6438053097345132,
+    "low": 0.5986154343848362,
+    "high": 0.6865713497963355
+   },
+   "link_precision": {
+    "k": 1535,
+    "n": 1639,
+    "rate": 0.9365466748017084,
+    "low": 0.9236934714106484,
+    "high": 0.9473582477569207
+   },
+   "event_precision": {
+    "k": 457,
+    "n": 2329,
+    "rate": 0.19622155431515673,
+    "low": 0.1805981230702711,
+    "high": 0.21284547807264406
+   },
+   "event_recall": {
+    "k": 457,
+    "n": 601,
+    "rate": 0.7603993344425957,
+    "low": 0.7246879261464638,
+    "high": 0.7928029342705445
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 1.0,
+    "ci": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     1.0
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.6659894351889476,
+    "ci": [
+     0.6659894351889476,
+     0.6659894351889476,
+     0.6659894351889476
+    ],
+    "per_seed": [
+     0.6659894351889476
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 24.86433260393873,
+    "ci": [
+     24.86433260393873,
+     24.86433260393873,
+     24.86433260393873
+    ],
+    "per_seed": [
+     24.86433260393873
+    ]
+   },
+   "gone_recommended": {
+    "mean": 157.0,
+    "ci": [
+     157.0,
+     157.0,
+     157.0
+    ],
+    "per_seed": [
+     157.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 1.0,
+    "ci": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     1.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 174.0,
+    "ci": [
+     174.0,
+     174.0,
+     174.0
+    ],
+    "per_seed": [
+     174.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.9151648351648352,
+    "ci": [
+     0.9151648351648352,
+     0.9151648351648352,
+     0.9151648351648352
+    ],
+    "per_seed": [
+     0.9151648351648352
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 51,
+      "by": "weekly_look"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 171,
+      "by": "weekly_look"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 0.9851308485329104,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 0.9371667936024372,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.8910891089108911,
+    "domain": 0.9722502522704339,
+    "city": 0.9815188172043011,
+    "country": 0.991263440860215,
+    "founded": 0.9744125326370757,
+    "headcount": 0.970954356846473,
+    "status": 0.9964664310954063
+   },
+   "review_items": {
+    "pairs": 0.0,
+    "articles": 0.0,
+    "links": 0.0
+   },
+   "rel_by_tier": {
+    "rule": 2461
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 216,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 141,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 88,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 1884,
+     "true": 172
+    }
+   },
+   "seconds": 1.1334596219999185
+  },
+  "model_alone": {
+   "label": "Model alone: every article to the large model, its label accepted",
+   "er_pair_precision": {
+    "k": 4974,
+    "n": 4985,
+    "rate": 0.9977933801404213,
+    "low": 0.9960527218719873,
+    "high": 0.9987673982937842
+   },
+   "er_pair_recall": {
+    "k": 4974,
+    "n": 5067,
+    "rate": 0.9816459443457667,
+    "low": 0.9775685480691793,
+    "high": 0.9849935639084458
+   },
+   "er_pair_recall_after_review": {
+    "k": 4974,
+    "n": 5067,
+    "rate": 0.9816459443457667,
+    "low": 0.9775685480691793,
+    "high": 0.9849935639084458
+   },
+   "rel_precision": {
+    "k": 2534,
+    "n": 2626,
+    "rate": 0.964965727341965,
+    "low": 0.9572263857536653,
+    "high": 0.9713466507364413
+   },
+   "rel_accuracy_final": {
+    "k": 2534,
+    "n": 2626,
+    "rate": 0.964965727341965,
+    "low": 0.9572263857536653,
+    "high": 0.9713466507364413
+   },
+   "rel_precision_ambiguous": {
+    "k": 404,
+    "n": 454,
+    "rate": 0.8898678414096917,
+    "low": 0.8577346230796646,
+    "high": 0.9154585511535199
+   },
+   "rel_precision_german": {
+    "k": 472,
+    "n": 485,
+    "rate": 0.9731958762886598,
+    "low": 0.9546845096866755,
+    "high": 0.9842699491809822
+   },
+   "link_precision": {
+    "k": 1858,
+    "n": 1915,
+    "rate": 0.9702349869451697,
+    "low": 0.9616317457684138,
+    "high": 0.976955368457169
+   },
+   "event_precision": {
+    "k": 440,
+    "n": 461,
+    "rate": 0.9544468546637744,
+    "low": 0.931367034412803,
+    "high": 0.9700152859302987
+   },
+   "event_recall": {
+    "k": 440,
+    "n": 601,
+    "rate": 0.7321131447587355,
+    "low": 0.6953141888789608,
+    "high": 0.7659636068282129
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.004493425361766945,
+    "ci": [
+     0.004493425361766945,
+     0.004493425361766945,
+     0.004493425361766945
+    ],
+    "per_seed": [
+     0.004493425361766945
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 1.0,
+    "ci": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     1.0
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.7292460015232293,
+    "ci": [
+     0.7292460015232293,
+     0.7292460015232293,
+     0.7292460015232293
+    ],
+    "per_seed": [
+     0.7292460015232293
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 2.352272727272727,
+    "ci": [
+     2.352272727272727,
+     2.352272727272727,
+     2.352272727272727
+    ],
+    "per_seed": [
+     2.352272727272727
+    ]
+   },
+   "gone_recommended": {
+    "mean": 2.0,
+    "ci": [
+     2.0,
+     2.0,
+     2.0
+    ],
+    "per_seed": [
+     2.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.9279120879120879,
+    "ci": [
+     0.9279120879120879,
+     0.9279120879120879,
+     0.9279120879120879
+    ],
+    "per_seed": [
+     0.9279120879120879
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 1.0,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 1.0,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.9183848797250859,
+    "domain": 0.9995159728944821,
+    "city": 1.0,
+    "country": 1.0,
+    "founded": 0.999508116084604,
+    "headcount": 0.9941491955143832,
+    "status": 0.9980657640232108
+   },
+   "review_items": {
+    "pairs": 0.0,
+    "articles": 0.0,
+    "links": 0.0
+   },
+   "rel_by_tier": {
+    "expensive": 2626
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 216,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 64,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 63,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 118,
+     "true": 172
+    }
+   },
+   "seconds": 1.67310390800003
+  },
+  "cheap_model_alone": {
+   "label": "Small model alone: every article to the small model, its label accepted",
+   "er_pair_precision": {
+    "k": 4974,
+    "n": 4985,
+    "rate": 0.9977933801404213,
+    "low": 0.9960527218719873,
+    "high": 0.9987673982937842
+   },
+   "er_pair_recall": {
+    "k": 4974,
+    "n": 5067,
+    "rate": 0.9816459443457667,
+    "low": 0.9775685480691793,
+    "high": 0.9849935639084458
+   },
+   "er_pair_recall_after_review": {
+    "k": 4974,
+    "n": 5067,
+    "rate": 0.9816459443457667,
+    "low": 0.9775685480691793,
+    "high": 0.9849935639084458
+   },
+   "rel_precision": {
+    "k": 2317,
+    "n": 2626,
+    "rate": 0.8823305407463823,
+    "low": 0.8694442606406291,
+    "high": 0.8940998250563955
+   },
+   "rel_accuracy_final": {
+    "k": 2317,
+    "n": 2626,
+    "rate": 0.8823305407463823,
+    "low": 0.8694442606406291,
+    "high": 0.8940998250563955
+   },
+   "rel_precision_ambiguous": {
+    "k": 319,
+    "n": 454,
+    "rate": 0.7026431718061674,
+    "low": 0.6590381697818822,
+    "high": 0.742847547898643
+   },
+   "rel_precision_german": {
+    "k": 429,
+    "n": 485,
+    "rate": 0.8845360824742268,
+    "low": 0.8530230496975564,
+    "high": 0.9100053014084051
+   },
+   "link_precision": {
+    "k": 1858,
+    "n": 1915,
+    "rate": 0.9702349869451697,
+    "low": 0.9616317457684138,
+    "high": 0.976955368457169
+   },
+   "event_precision": {
+    "k": 440,
+    "n": 468,
+    "rate": 0.9401709401709402,
+    "low": 0.9148890137801853,
+    "high": 0.9582853735565819
+   },
+   "event_recall": {
+    "k": 440,
+    "n": 601,
+    "rate": 0.7321131447587355,
+    "low": 0.6953141888789608,
+    "high": 0.7659636068282129
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.00024074028941355676,
+    "ci": [
+     0.00024074028941355676,
+     0.00024074028941355676,
+     0.00024074028941355676
+    ],
+    "per_seed": [
+     0.00024074028941355676
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 1.0,
+    "ci": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     1.0
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.7292460015232293,
+    "ci": [
+     0.7292460015232293,
+     0.7292460015232293,
+     0.7292460015232293
+    ],
+    "per_seed": [
+     0.7292460015232293
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 2.422727272727273,
+    "ci": [
+     2.422727272727273,
+     2.422727272727273,
+     2.422727272727273
+    ],
+    "per_seed": [
+     2.422727272727273
+    ]
+   },
+   "gone_recommended": {
+    "mean": 2.0,
+    "ci": [
+     2.0,
+     2.0,
+     2.0
+    ],
+    "per_seed": [
+     2.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.9257142857142857,
+    "ci": [
+     0.9257142857142857,
+     0.9257142857142857,
+     0.9257142857142857
+    ],
+    "per_seed": [
+     0.9257142857142857
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 1.0,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 1.0,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.9183848797250859,
+    "domain": 0.9995159728944821,
+    "city": 1.0,
+    "country": 1.0,
+    "founded": 0.999508116084604,
+    "headcount": 0.9941491955143832,
+    "status": 0.9946911196911197
+   },
+   "review_items": {
+    "pairs": 0.0,
+    "articles": 0.0,
+    "links": 0.0
+   },
+   "rel_by_tier": {
+    "cheap": 2626
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 216,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 71,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 63,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 118,
+     "true": 172
+    }
+   },
+   "seconds": 1.8223839150000458
+  },
+  "platform": {
+   "label": "Platform: idempotent loads, monitors, backfills, weighted resolution, cascade, evidence dates",
+   "er_pair_precision": {
+    "k": 4974,
+    "n": 4985,
+    "rate": 0.9977933801404213,
+    "low": 0.9960527218719873,
+    "high": 0.9987673982937842
+   },
+   "er_pair_recall": {
+    "k": 4974,
+    "n": 5067,
+    "rate": 0.9816459443457667,
+    "low": 0.9775685480691793,
+    "high": 0.9849935639084458
+   },
+   "er_pair_recall_after_review": {
+    "k": 5042,
+    "n": 5067,
+    "rate": 0.9950661140714426,
+    "low": 0.9927263530396024,
+    "high": 0.9966557645165837
+   },
+   "rel_precision": {
+    "k": 2574,
+    "n": 2601,
+    "rate": 0.9896193771626297,
+    "low": 0.9849385340925466,
+    "high": 0.9928560465836832
+   },
+   "rel_accuracy_final": {
+    "k": 2599,
+    "n": 2626,
+    "rate": 0.9897182025894897,
+    "low": 0.9850815235558297,
+    "high": 0.9929241479644628
+   },
+   "rel_precision_ambiguous": {
+    "k": 410,
+    "n": 431,
+    "rate": 0.951276102088167,
+    "low": 0.9266647719372486,
+    "high": 0.967913851635105
+   },
+   "rel_precision_german": {
+    "k": 479,
+    "n": 481,
+    "rate": 0.9958419958419958,
+    "low": 0.9849674627315049,
+    "high": 0.9988590076043738
+   },
+   "link_precision": {
+    "k": 2094,
+    "n": 2154,
+    "rate": 0.9721448467966574,
+    "low": 0.9643103162511162,
+    "high": 0.9782982607639901
+   },
+   "event_precision": {
+    "k": 440,
+    "n": 456,
+    "rate": 0.9649122807017544,
+    "low": 0.9437676969806362,
+    "high": 0.9782889416531889
+   },
+   "event_recall": {
+    "k": 440,
+    "n": 601,
+    "rate": 0.7321131447587355,
+    "low": 0.6953141888789608,
+    "high": 0.7659636068282129
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.0008879341964965726,
+    "ci": [
+     0.0008879341964965726,
+     0.0008879341964965726,
+     0.0008879341964965726
+    ],
+    "per_seed": [
+     0.0008879341964965726
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 0.9904798172124905,
+    "ci": [
+     0.9904798172124905,
+     0.9904798172124905,
+     0.9904798172124905
+    ],
+    "per_seed": [
+     0.9904798172124905
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.00952018278750952,
+    "ci": [
+     0.00952018278750952,
+     0.00952018278750952,
+     0.00952018278750952
+    ],
+    "per_seed": [
+     0.00952018278750952
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.8202589489718203,
+    "ci": [
+     0.8202589489718203,
+     0.8202589489718203,
+     0.8202589489718203
+    ],
+    "per_seed": [
+     0.8202589489718203
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 2.3431818181818183,
+    "ci": [
+     2.3431818181818183,
+     2.3431818181818183,
+     2.3431818181818183
+    ],
+    "per_seed": [
+     2.3431818181818183
+    ]
+   },
+   "gone_recommended": {
+    "mean": 2.0,
+    "ci": [
+     2.0,
+     2.0,
+     2.0
+    ],
+    "per_seed": [
+     2.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.9287912087912088,
+    "ci": [
+     0.9287912087912088,
+     0.9287912087912088,
+     0.9287912087912088
+    ],
+    "per_seed": [
+     0.9287912087912088
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 1.0,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 1.0,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.9187096774193548,
+    "domain": 0.9995159728944821,
+    "city": 1.0,
+    "country": 1.0,
+    "founded": 0.999508116084604,
+    "headcount": 0.9941491955143832,
+    "status": 0.9990314769975787
+   },
+   "review_items": {
+    "pairs": 246.0,
+    "articles": 25.0,
+    "links": 256.0
+   },
+   "rel_by_tier": {
+    "cheap": 441,
+    "rule": 1720,
+    "expensive": 440,
+    "person": 25
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 216,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 61,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 61,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 118,
+     "true": 172
+    }
+   },
+   "seconds": 2.066093050999825,
+   "vendors": [
+    {
+     "feed": "vendor_profiles",
+     "records_billed": 5313,
+     "spend_eur": 106.26,
+     "companies": 2052,
+     "only_here": 75,
+     "correct_datapoints": 15280,
+     "eur_per_correct_datapoint": 0.00695
+    },
+    {
+     "feed": "register_notices",
+     "records_billed": 1674,
+     "spend_eur": 6.7,
+     "companies": 1544,
+     "only_here": 0,
+     "correct_datapoints": 6073,
+     "eur_per_correct_datapoint": 0.0011
+    },
+    {
+     "feed": "news_mentions",
+     "records_billed": 2626,
+     "spend_eur": 2.63,
+     "companies": 0,
+     "only_here": 0,
+     "correct_datapoints": 2081,
+     "eur_per_correct_datapoint": 0.00126
+    },
+    {
+     "feed": "job_posts",
+     "records_billed": 21332,
+     "spend_eur": 10.67,
+     "companies": 2400,
+     "only_here": 167,
+     "correct_datapoints": 21332,
+     "eur_per_correct_datapoint": 0.0005
+    }
+   ],
+   "search": {
+    "exact": {
+     "recall_at_1": {
+      "k": 96,
+      "n": 600,
+      "rate": 0.16,
+      "low": 0.1328420297859674,
+      "high": 0.19148408487721583
+     },
+     "recall_at_5": {
+      "k": 108,
+      "n": 600,
+      "rate": 0.18,
+      "low": 0.15132481221976815,
+      "high": 0.21274682511028667
+     }
+    },
+    "normalised": {
+     "recall_at_1": {
+      "k": 217,
+      "n": 600,
+      "rate": 0.3616666666666667,
+      "low": 0.3242124780499538,
+      "high": 0.4008809901708512
+     },
+     "recall_at_5": {
+      "k": 270,
+      "n": 600,
+      "rate": 0.45,
+      "low": 0.4106358628051308,
+      "high": 0.4900003305276904
+     }
+    },
+    "fuzzy": {
+     "recall_at_1": {
+      "k": 365,
+      "n": 600,
+      "rate": 0.6083333333333333,
+      "low": 0.5687045041521013,
+      "high": 0.6465837436267863
+     },
+     "recall_at_5": {
+      "k": 490,
+      "n": 600,
+      "rate": 0.8166666666666667,
+      "low": 0.7837234033612118,
+      "high": 0.8455807055309216
+     }
+    }
+   },
+   "search_examples": [
+    "Genstoli Logistics AB",
+    "Lixionqua",
+    "Tekar",
+    "Nekra",
+    "Tekva",
+    "Dorntufi Materials GmbH",
+    "Br\u00fcckner Materials GmbH",
+    "Sonnenh\u00f6he Mobility AG"
+   ]
+  },
+  "no_aliases": {
+   "label": "Platform without register name history",
+   "er_pair_precision": {
+    "k": 4898,
+    "n": 4917,
+    "rate": 0.9961358551962579,
+    "low": 0.9939722942802073,
+    "high": 0.9975247699618118
+   },
+   "er_pair_recall": {
+    "k": 4898,
+    "n": 5067,
+    "rate": 0.9666469311229524,
+    "low": 0.9613386053340921,
+    "high": 0.9712482062910234
+   },
+   "er_pair_recall_after_review": {
+    "k": 4965,
+    "n": 5067,
+    "rate": 0.9798697454114861,
+    "low": 0.9756234751082218,
+    "high": 0.9833889302487113
+   },
+   "rel_precision": {
+    "k": 2574,
+    "n": 2601,
+    "rate": 0.9896193771626297,
+    "low": 0.9849385340925466,
+    "high": 0.9928560465836832
+   },
+   "rel_accuracy_final": {
+    "k": 2599,
+    "n": 2626,
+    "rate": 0.9897182025894897,
+    "low": 0.9850815235558297,
+    "high": 0.9929241479644628
+   },
+   "rel_precision_ambiguous": {
+    "k": 410,
+    "n": 431,
+    "rate": 0.951276102088167,
+    "low": 0.9266647719372486,
+    "high": 0.967913851635105
+   },
+   "rel_precision_german": {
+    "k": 479,
+    "n": 481,
+    "rate": 0.9958419958419958,
+    "low": 0.9849674627315049,
+    "high": 0.9988590076043738
+   },
+   "link_precision": {
+    "k": 2099,
+    "n": 2157,
+    "rate": 0.9731108020398702,
+    "low": 0.9653975500565283,
+    "high": 0.9791418368194001
+   },
+   "event_precision": {
+    "k": 440,
+    "n": 460,
+    "rate": 0.9565217391304348,
+    "low": 0.9338005280866175,
+    "high": 0.9716809983655161
+   },
+   "event_recall": {
+    "k": 440,
+    "n": 601,
+    "rate": 0.7321131447587355,
+    "low": 0.6953141888789608,
+    "high": 0.7659636068282129
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.0008879341964965726,
+    "ci": [
+     0.0008879341964965726,
+     0.0008879341964965726,
+     0.0008879341964965726
+    ],
+    "per_seed": [
+     0.0008879341964965726
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 0.9904798172124905,
+    "ci": [
+     0.9904798172124905,
+     0.9904798172124905,
+     0.9904798172124905
+    ],
+    "per_seed": [
+     0.9904798172124905
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.00952018278750952,
+    "ci": [
+     0.00952018278750952,
+     0.00952018278750952,
+     0.00952018278750952
+    ],
+    "per_seed": [
+     0.00952018278750952
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.8214013709063214,
+    "ci": [
+     0.8214013709063214,
+     0.8214013709063214,
+     0.8214013709063214
+    ],
+    "per_seed": [
+     0.8214013709063214
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 2.3431818181818183,
+    "ci": [
+     2.3431818181818183,
+     2.3431818181818183,
+     2.3431818181818183
+    ],
+    "per_seed": [
+     2.3431818181818183
+    ]
+   },
+   "gone_recommended": {
+    "mean": 2.0,
+    "ci": [
+     2.0,
+     2.0,
+     2.0
+    ],
+    "per_seed": [
+     2.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.9292307692307692,
+    "ci": [
+     0.9292307692307692,
+     0.9292307692307692,
+     0.9292307692307692
+    ],
+    "per_seed": [
+     0.9292307692307692
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 1.0,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 1.0,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.9066213921901528,
+    "domain": 0.9990314769975787,
+    "city": 0.9995728321230244,
+    "country": 0.9995728321230244,
+    "founded": 0.9990157480314961,
+    "headcount": 0.9936585365853658,
+    "status": 0.9990328820116054
+   },
+   "review_items": {
+    "pairs": 235.0,
+    "articles": 25.0,
+    "links": 254.0
+   },
+   "rel_by_tier": {
+    "cheap": 441,
+    "rule": 1720,
+    "expensive": 440,
+    "person": 25
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 216,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 64,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 62,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 118,
+     "true": 172
+    }
+   },
+   "seconds": 2.1395139659998677
+  },
+  "no_renormalise": {
+   "label": "Platform without renormalised weights (a missing field scores zero)",
+   "er_pair_precision": {
+    "k": 2339,
+    "n": 2355,
+    "rate": 0.9932059447983015,
+    "low": 0.9889917322224748,
+    "high": 0.9958136909140343
+   },
+   "er_pair_recall": {
+    "k": 2339,
+    "n": 5067,
+    "rate": 0.46161436747582396,
+    "low": 0.4479218902724685,
+    "high": 0.4753650055359116
+   },
+   "er_pair_recall_after_review": {
+    "k": 2439,
+    "n": 5067,
+    "rate": 0.48134991119005327,
+    "low": 0.46761146737755266,
+    "high": 0.49511661310518207
+   },
+   "rel_precision": {
+    "k": 2574,
+    "n": 2601,
+    "rate": 0.9896193771626297,
+    "low": 0.9849385340925466,
+    "high": 0.9928560465836832
+   },
+   "rel_accuracy_final": {
+    "k": 2599,
+    "n": 2626,
+    "rate": 0.9897182025894897,
+    "low": 0.9850815235558297,
+    "high": 0.9929241479644628
+   },
+   "rel_precision_ambiguous": {
+    "k": 410,
+    "n": 431,
+    "rate": 0.951276102088167,
+    "low": 0.9266647719372486,
+    "high": 0.967913851635105
+   },
+   "rel_precision_german": {
+    "k": 479,
+    "n": 481,
+    "rate": 0.9958419958419958,
+    "low": 0.9849674627315049,
+    "high": 0.9988590076043738
+   },
+   "link_precision": {
+    "k": 1866,
+    "n": 1900,
+    "rate": 0.9821052631578947,
+    "low": 0.9750985218450666,
+    "high": 0.9871664060775084
+   },
+   "event_precision": {
+    "k": 440,
+    "n": 518,
+    "rate": 0.8494208494208494,
+    "low": 0.8160556020015108,
+    "high": 0.8776414892231059
+   },
+   "event_recall": {
+    "k": 440,
+    "n": 601,
+    "rate": 0.7321131447587355,
+    "low": 0.6953141888789608,
+    "high": 0.7659636068282129
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.0008879341964965726,
+    "ci": [
+     0.0008879341964965726,
+     0.0008879341964965726,
+     0.0008879341964965726
+    ],
+    "per_seed": [
+     0.0008879341964965726
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 0.9904798172124905,
+    "ci": [
+     0.9904798172124905,
+     0.9904798172124905,
+     0.9904798172124905
+    ],
+    "per_seed": [
+     0.9904798172124905
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.00952018278750952,
+    "ci": [
+     0.00952018278750952,
+     0.00952018278750952,
+     0.00952018278750952
+    ],
+    "per_seed": [
+     0.00952018278750952
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.7235338918507236,
+    "ci": [
+     0.7235338918507236,
+     0.7235338918507236,
+     0.7235338918507236
+    ],
+    "per_seed": [
+     0.7235338918507236
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 2.3363636363636364,
+    "ci": [
+     2.3363636363636364,
+     2.3363636363636364,
+     2.3363636363636364
+    ],
+    "per_seed": [
+     2.3363636363636364
+    ]
+   },
+   "gone_recommended": {
+    "mean": 9.0,
+    "ci": [
+     9.0,
+     9.0,
+     9.0
+    ],
+    "per_seed": [
+     9.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.9345054945054945,
+    "ci": [
+     0.9345054945054945,
+     0.9345054945054945,
+     0.9345054945054945
+    ],
+    "per_seed": [
+     0.9345054945054945
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 1.0,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 1.0,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.9080587094987538,
+    "domain": 1.0,
+    "city": 0.996384872080089,
+    "country": 0.996662958843159,
+    "founded": 1.0,
+    "headcount": 0.9946393762183235,
+    "status": 0.9985908877407234
+   },
+   "review_items": {
+    "pairs": 534.0,
+    "articles": 25.0,
+    "links": 412.0
+   },
+   "rel_by_tier": {
+    "cheap": 441,
+    "rule": 1720,
+    "expensive": 440,
+    "person": 25
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 216,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 92,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 92,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 118,
+     "true": 172
+    }
+   },
+   "seconds": 1.9478836709999996
+  },
+  "no_transliteration": {
+   "label": "Platform without umlaut transliteration",
+   "er_pair_precision": {
+    "k": 4680,
+    "n": 4691,
+    "rate": 0.9976550842037945,
+    "low": 0.9958056276483346,
+    "high": 0.9986901184914286
+   },
+   "er_pair_recall": {
+    "k": 4680,
+    "n": 5067,
+    "rate": 0.9236234458259325,
+    "low": 0.9159850327810023,
+    "high": 0.9306199962540201
+   },
+   "er_pair_recall_after_review": {
+    "k": 4689,
+    "n": 5067,
+    "rate": 0.9253996447602132,
+    "low": 0.9178383113500588,
+    "high": 0.9323164243056556
+   },
+   "rel_precision": {
+    "k": 2574,
+    "n": 2601,
+    "rate": 0.9896193771626297,
+    "low": 0.9849385340925466,
+    "high": 0.9928560465836832
+   },
+   "rel_accuracy_final": {
+    "k": 2599,
+    "n": 2626,
+    "rate": 0.9897182025894897,
+    "low": 0.9850815235558297,
+    "high": 0.9929241479644628
+   },
+   "rel_precision_ambiguous": {
+    "k": 410,
+    "n": 431,
+    "rate": 0.951276102088167,
+    "low": 0.9266647719372486,
+    "high": 0.967913851635105
+   },
+   "rel_precision_german": {
+    "k": 479,
+    "n": 481,
+    "rate": 0.9958419958419958,
+    "low": 0.9849674627315049,
+    "high": 0.9988590076043738
+   },
+   "link_precision": {
+    "k": 2078,
+    "n": 2138,
+    "rate": 0.9719363891487371,
+    "low": 0.9640444501920149,
+    "high": 0.9781354010164032
+   },
+   "event_precision": {
+    "k": 440,
+    "n": 465,
+    "rate": 0.946236559139785,
+    "low": 0.9218386193486198,
+    "high": 0.9633217418479977
+   },
+   "event_recall": {
+    "k": 440,
+    "n": 601,
+    "rate": 0.7321131447587355,
+    "low": 0.6953141888789608,
+    "high": 0.7659636068282129
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.0008879341964965726,
+    "ci": [
+     0.0008879341964965726,
+     0.0008879341964965726,
+     0.0008879341964965726
+    ],
+    "per_seed": [
+     0.0008879341964965726
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 0.9904798172124905,
+    "ci": [
+     0.9904798172124905,
+     0.9904798172124905,
+     0.9904798172124905
+    ],
+    "per_seed": [
+     0.9904798172124905
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.00952018278750952,
+    "ci": [
+     0.00952018278750952,
+     0.00952018278750952,
+     0.00952018278750952
+    ],
+    "per_seed": [
+     0.00952018278750952
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.8141660319878141,
+    "ci": [
+     0.8141660319878141,
+     0.8141660319878141,
+     0.8141660319878141
+    ],
+    "per_seed": [
+     0.8141660319878141
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 2.3431818181818183,
+    "ci": [
+     2.3431818181818183,
+     2.3431818181818183,
+     2.3431818181818183
+    ],
+    "per_seed": [
+     2.3431818181818183
+    ]
+   },
+   "gone_recommended": {
+    "mean": 3.0,
+    "ci": [
+     3.0,
+     3.0,
+     3.0
+    ],
+    "per_seed": [
+     3.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.9287912087912088,
+    "ci": [
+     0.9287912087912088,
+     0.9287912087912088,
+     0.9287912087912088
+    ],
+    "per_seed": [
+     0.9287912087912088
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 1.0,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 1.0,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.9174125305126118,
+    "domain": 0.9995159728944821,
+    "city": 1.0,
+    "country": 1.0,
+    "founded": 0.999508116084604,
+    "headcount": 0.9941491955143832,
+    "status": 0.9990356798457087
+   },
+   "review_items": {
+    "pairs": 71.0,
+    "articles": 25.0,
+    "links": 238.0
+   },
+   "rel_by_tier": {
+    "cheap": 441,
+    "rule": 1720,
+    "expensive": 440,
+    "person": 25
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 216,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 66,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 65,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 118,
+     "true": 172
+    }
+   },
+   "seconds": 1.836883016000229
+  },
+  "fuzzy_name_only": {
+   "label": "Platform with name-only fuzzy matching",
+   "er_pair_precision": {
+    "k": 4177,
+    "n": 8984,
+    "rate": 0.46493766696349065,
+    "low": 0.45464099822296056,
+    "high": 0.4752643085194279
+   },
+   "er_pair_recall": {
+    "k": 4177,
+    "n": 5067,
+    "rate": 0.8243536609433589,
+    "low": 0.81363153965809,
+    "high": 0.8345843304649285
+   },
+   "er_pair_recall_after_review": {
+    "k": 4265,
+    "n": 5067,
+    "rate": 0.8417209394118808,
+    "low": 0.8314122893905477,
+    "high": 0.8515118232459028
+   },
+   "rel_precision": {
+    "k": 2574,
+    "n": 2601,
+    "rate": 0.9896193771626297,
+    "low": 0.9849385340925466,
+    "high": 0.9928560465836832
+   },
+   "rel_accuracy_final": {
+    "k": 2599,
+    "n": 2626,
+    "rate": 0.9897182025894897,
+    "low": 0.9850815235558297,
+    "high": 0.9929241479644628
+   },
+   "rel_precision_ambiguous": {
+    "k": 410,
+    "n": 431,
+    "rate": 0.951276102088167,
+    "low": 0.9266647719372486,
+    "high": 0.967913851635105
+   },
+   "rel_precision_german": {
+    "k": 479,
+    "n": 481,
+    "rate": 0.9958419958419958,
+    "low": 0.9849674627315049,
+    "high": 0.9988590076043738
+   },
+   "link_precision": {
+    "k": 1862,
+    "n": 2203,
+    "rate": 0.8452110758057195,
+    "low": 0.8295070096171796,
+    "high": 0.8597132769679564
+   },
+   "event_precision": {
+    "k": 363,
+    "n": 438,
+    "rate": 0.8287671232876712,
+    "low": 0.7906662205346986,
+    "high": 0.8611510823177264
+   },
+   "event_recall": {
+    "k": 363,
+    "n": 601,
+    "rate": 0.6039933444259568,
+    "low": 0.564350768018376,
+    "high": 0.642314911061899
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.0008879341964965726,
+    "ci": [
+     0.0008879341964965726,
+     0.0008879341964965726,
+     0.0008879341964965726
+    ],
+    "per_seed": [
+     0.0008879341964965726
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 0.9904798172124905,
+    "ci": [
+     0.9904798172124905,
+     0.9904798172124905,
+     0.9904798172124905
+    ],
+    "per_seed": [
+     0.9904798172124905
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.00952018278750952,
+    "ci": [
+     0.00952018278750952,
+     0.00952018278750952,
+     0.00952018278750952
+    ],
+    "per_seed": [
+     0.00952018278750952
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.8389185072353389,
+    "ci": [
+     0.8389185072353389,
+     0.8389185072353389,
+     0.8389185072353389
+    ],
+    "per_seed": [
+     0.8389185072353389
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 2.283746556473829,
+    "ci": [
+     2.283746556473829,
+     2.283746556473829,
+     2.283746556473829
+    ],
+    "per_seed": [
+     2.283746556473829
+    ]
+   },
+   "gone_recommended": {
+    "mean": 3.0,
+    "ci": [
+     3.0,
+     3.0,
+     3.0
+    ],
+    "per_seed": [
+     3.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.8637362637362638,
+    "ci": [
+     0.8637362637362638,
+     0.8637362637362638,
+     0.8637362637362638
+    ],
+    "per_seed": [
+     0.8637362637362638
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 1.0,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 1.0,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.9116447666515632,
+    "domain": 0.9175891758917589,
+    "city": 0.9639598540145985,
+    "country": 0.9712591240875912,
+    "founded": 0.9214463840399002,
+    "headcount": 0.925512104283054,
+    "status": 0.9871873093349604
+   },
+   "review_items": {
+    "pairs": 1139.0,
+    "articles": 25.0,
+    "links": 226.0
+   },
+   "rel_by_tier": {
+    "cheap": 441,
+    "rule": 1720,
+    "expensive": 440,
+    "person": 25
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 209,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 66,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 68,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 95,
+     "true": 172
+    }
+   },
+   "seconds": 1.6691262919998735
+  },
+  "no_rules": {
+   "label": "Platform without the rule tier (every article starts at the small model)",
+   "er_pair_precision": {
+    "k": 4974,
+    "n": 4985,
+    "rate": 0.9977933801404213,
+    "low": 0.9960527218719873,
+    "high": 0.9987673982937842
+   },
+   "er_pair_recall": {
+    "k": 4974,
+    "n": 5067,
+    "rate": 0.9816459443457667,
+    "low": 0.9775685480691793,
+    "high": 0.9849935639084458
+   },
+   "er_pair_recall_after_review": {
+    "k": 5042,
+    "n": 5067,
+    "rate": 0.9950661140714426,
+    "low": 0.9927263530396024,
+    "high": 0.9966557645165837
+   },
+   "rel_precision": {
+    "k": 2546,
+    "n": 2591,
+    "rate": 0.9826321883442686,
+    "low": 0.9768405972326648,
+    "high": 0.9869947289776133
+   },
+   "rel_accuracy_final": {
+    "k": 2581,
+    "n": 2626,
+    "rate": 0.9828636709824828,
+    "low": 0.9771482432990282,
+    "high": 0.9871683908282898
+   },
+   "rel_precision_ambiguous": {
+    "k": 410,
+    "n": 431,
+    "rate": 0.951276102088167,
+    "low": 0.9266647719372486,
+    "high": 0.967913851635105
+   },
+   "rel_precision_german": {
+    "k": 474,
+    "n": 479,
+    "rate": 0.9895615866388309,
+    "low": 0.9757996538061158,
+    "high": 0.9955333879201977
+   },
+   "link_precision": {
+    "k": 2097,
+    "n": 2157,
+    "rate": 0.972183588317107,
+    "low": 0.9643597290389577,
+    "high": 0.9783285272404475
+   },
+   "event_precision": {
+    "k": 440,
+    "n": 457,
+    "rate": 0.962800875273523,
+    "low": 0.9412386409568234,
+    "high": 0.9766472443451979
+   },
+   "event_recall": {
+    "k": 440,
+    "n": 601,
+    "rate": 0.7321131447587355,
+    "low": 0.6953141888789608,
+    "high": 0.7659636068282129
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.0024225948210205633,
+    "ci": [
+     0.0024225948210205633,
+     0.0024225948210205633,
+     0.0024225948210205633
+    ],
+    "per_seed": [
+     0.0024225948210205633
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 0.9866717440974867,
+    "ci": [
+     0.9866717440974867,
+     0.9866717440974867,
+     0.9866717440974867
+    ],
+    "per_seed": [
+     0.9866717440974867
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.013328255902513329,
+    "ci": [
+     0.013328255902513329,
+     0.013328255902513329,
+     0.013328255902513329
+    ],
+    "per_seed": [
+     0.013328255902513329
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.8214013709063214,
+    "ci": [
+     0.8214013709063214,
+     0.8214013709063214,
+     0.8214013709063214
+    ],
+    "per_seed": [
+     0.8214013709063214
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 2.3431818181818183,
+    "ci": [
+     2.3431818181818183,
+     2.3431818181818183,
+     2.3431818181818183
+    ],
+    "per_seed": [
+     2.3431818181818183
+    ]
+   },
+   "gone_recommended": {
+    "mean": 2.0,
+    "ci": [
+     2.0,
+     2.0,
+     2.0
+    ],
+    "per_seed": [
+     2.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.9283516483516484,
+    "ci": [
+     0.9283516483516484,
+     0.9283516483516484,
+     0.9283516483516484
+    ],
+    "per_seed": [
+     0.9283516483516484
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 1.0,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 1.0,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.9187096774193548,
+    "domain": 0.9995159728944821,
+    "city": 1.0,
+    "country": 1.0,
+    "founded": 0.999508116084604,
+    "headcount": 0.9941491955143832,
+    "status": 0.998547215496368
+   },
+   "review_items": {
+    "pairs": 246.0,
+    "articles": 35.0,
+    "links": 259.0
+   },
+   "rel_by_tier": {
+    "cheap": 1357,
+    "expensive": 1234,
+    "person": 35
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 216,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 62,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 61,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 118,
+     "true": 172
+    }
+   },
+   "seconds": 1.8601858770002764
+  },
+  "no_review": {
+   "label": "Platform without the review queue (low-confidence labels accepted)",
+   "er_pair_precision": {
+    "k": 4974,
+    "n": 4985,
+    "rate": 0.9977933801404213,
+    "low": 0.9960527218719873,
+    "high": 0.9987673982937842
+   },
+   "er_pair_recall": {
+    "k": 4974,
+    "n": 5067,
+    "rate": 0.9816459443457667,
+    "low": 0.9775685480691793,
+    "high": 0.9849935639084458
+   },
+   "er_pair_recall_after_review": {
+    "k": 4974,
+    "n": 5067,
+    "rate": 0.9816459443457667,
+    "low": 0.9775685480691793,
+    "high": 0.9849935639084458
+   },
+   "rel_precision": {
+    "k": 2574,
+    "n": 2626,
+    "rate": 0.9801980198019802,
+    "low": 0.9741257650351677,
+    "high": 0.984867354550438
+   },
+   "rel_accuracy_final": {
+    "k": 2574,
+    "n": 2626,
+    "rate": 0.9801980198019802,
+    "low": 0.9741257650351677,
+    "high": 0.984867354550438
+   },
+   "rel_precision_ambiguous": {
+    "k": 410,
+    "n": 454,
+    "rate": 0.9030837004405287,
+    "low": 0.872391843873355,
+    "high": 0.927011268469429
+   },
+   "rel_precision_german": {
+    "k": 479,
+    "n": 485,
+    "rate": 0.9876288659793815,
+    "low": 0.9732753151028912,
+    "high": 0.9943182775864381
+   },
+   "link_precision": {
+    "k": 1858,
+    "n": 1915,
+    "rate": 0.9702349869451697,
+    "low": 0.9616317457684138,
+    "high": 0.976955368457169
+   },
+   "event_precision": {
+    "k": 440,
+    "n": 459,
+    "rate": 0.9586056644880174,
+    "low": 0.9362562654913367,
+    "high": 0.9733421802836326
+   },
+   "event_recall": {
+    "k": 440,
+    "n": 601,
+    "rate": 0.7321131447587355,
+    "low": 0.6953141888789608,
+    "high": 0.7659636068282129
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.0008879341964965726,
+    "ci": [
+     0.0008879341964965726,
+     0.0008879341964965726,
+     0.0008879341964965726
+    ],
+    "per_seed": [
+     0.0008879341964965726
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 1.0,
+    "ci": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "per_seed": [
+     1.0
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.7292460015232293,
+    "ci": [
+     0.7292460015232293,
+     0.7292460015232293,
+     0.7292460015232293
+    ],
+    "per_seed": [
+     0.7292460015232293
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 2.356818181818182,
+    "ci": [
+     2.356818181818182,
+     2.356818181818182,
+     2.356818181818182
+    ],
+    "per_seed": [
+     2.356818181818182
+    ]
+   },
+   "gone_recommended": {
+    "mean": 2.0,
+    "ci": [
+     2.0,
+     2.0,
+     2.0
+    ],
+    "per_seed": [
+     2.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.9287912087912088,
+    "ci": [
+     0.9287912087912088,
+     0.9287912087912088,
+     0.9287912087912088
+    ],
+    "per_seed": [
+     0.9287912087912088
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 1.0,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 1.0,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.9183848797250859,
+    "domain": 0.9995159728944821,
+    "city": 1.0,
+    "country": 1.0,
+    "founded": 0.999508116084604,
+    "headcount": 0.9941491955143832,
+    "status": 0.9990328820116054
+   },
+   "review_items": {
+    "pairs": 0.0,
+    "articles": 0.0,
+    "links": 0.0
+   },
+   "rel_by_tier": {
+    "cheap": 441,
+    "rule": 1720,
+    "expensive": 465
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 216,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 62,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 63,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 118,
+     "true": 172
+    }
+   },
+   "seconds": 1.9747911429999476
+  },
+  "no_backfill": {
+   "label": "Platform without backfills",
+   "er_pair_precision": {
+    "k": 4974,
+    "n": 4985,
+    "rate": 0.9977933801404213,
+    "low": 0.9960527218719873,
+    "high": 0.9987673982937842
+   },
+   "er_pair_recall": {
+    "k": 4974,
+    "n": 5067,
+    "rate": 0.9816459443457667,
+    "low": 0.9775685480691793,
+    "high": 0.9849935639084458
+   },
+   "er_pair_recall_after_review": {
+    "k": 5042,
+    "n": 5067,
+    "rate": 0.9950661140714426,
+    "low": 0.9927263530396024,
+    "high": 0.9966557645165837
+   },
+   "rel_precision": {
+    "k": 2413,
+    "n": 2439,
+    "rate": 0.989339893398934,
+    "low": 0.984425784836937,
+    "high": 0.9927149352162995
+   },
+   "rel_accuracy_final": {
+    "k": 2435,
+    "n": 2461,
+    "rate": 0.9894351889475823,
+    "low": 0.9845646021487908,
+    "high": 0.9927801489297368
+   },
+   "rel_precision_ambiguous": {
+    "k": 386,
+    "n": 406,
+    "rate": 0.9507389162561576,
+    "low": 0.9251399919047544,
+    "high": 0.9678879486459363
+   },
+   "rel_precision_german": {
+    "k": 446,
+    "n": 448,
+    "rate": 0.9955357142857143,
+    "low": 0.9838703430328064,
+    "high": 0.9987749025576838
+   },
+   "link_precision": {
+    "k": 1955,
+    "n": 2011,
+    "rate": 0.9721531576330183,
+    "low": 0.9640123376639838,
+    "high": 0.9784935149052703
+   },
+   "event_precision": {
+    "k": 438,
+    "n": 454,
+    "rate": 0.9647577092511013,
+    "low": 0.9435233633946147,
+    "high": 0.9781927934596335
+   },
+   "event_recall": {
+    "k": 438,
+    "n": 601,
+    "rate": 0.7287853577371048,
+    "low": 0.6918707916619701,
+    "high": 0.7627937023146346
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.000891278992279561,
+    "ci": [
+     0.000891278992279561,
+     0.000891278992279561,
+     0.000891278992279561
+    ],
+    "per_seed": [
+     0.000891278992279561
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 0.9910605444941081,
+    "ci": [
+     0.9910605444941081,
+     0.9910605444941081,
+     0.9910605444941081
+    ],
+    "per_seed": [
+     0.9910605444941081
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.008939455505891914,
+    "ci": [
+     0.008939455505891914,
+     0.008939455505891914,
+     0.008939455505891914
+    ],
+    "per_seed": [
+     0.008939455505891914
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.8171475010158472,
+    "ci": [
+     0.8171475010158472,
+     0.8171475010158472,
+     0.8171475010158472
+    ],
+    "per_seed": [
+     0.8171475010158472
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 2.557077625570776,
+    "ci": [
+     2.557077625570776,
+     2.557077625570776,
+     2.557077625570776
+    ],
+    "per_seed": [
+     2.557077625570776
+    ]
+   },
+   "gone_recommended": {
+    "mean": 2.0,
+    "ci": [
+     2.0,
+     2.0,
+     2.0
+    ],
+    "per_seed": [
+     2.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.9287912087912088,
+    "ci": [
+     0.9287912087912088,
+     0.9287912087912088,
+     0.9287912087912088
+    ],
+    "per_seed": [
+     0.9287912087912088
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 0.9851308485329104,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 0.9371667936024372,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.9187096774193548,
+    "domain": 0.9995159728944821,
+    "city": 1.0,
+    "country": 1.0,
+    "founded": 0.999508116084604,
+    "headcount": 0.9936616284739151,
+    "status": 0.9990314769975787
+   },
+   "review_items": {
+    "pairs": 246.0,
+    "articles": 22.0,
+    "links": 239.0
+   },
+   "rel_by_tier": {
+    "cheap": 415,
+    "rule": 1607,
+    "expensive": 417,
+    "person": 22
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 214,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 61,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 61,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 118,
+     "true": 172
+    }
+   },
+   "seconds": 2.0201904569998987
+  },
+  "ingestion_dates": {
+   "label": "Platform dating events by ingestion",
+   "er_pair_precision": {
+    "k": 4974,
+    "n": 4985,
+    "rate": 0.9977933801404213,
+    "low": 0.9960527218719873,
+    "high": 0.9987673982937842
+   },
+   "er_pair_recall": {
+    "k": 4974,
+    "n": 5067,
+    "rate": 0.9816459443457667,
+    "low": 0.9775685480691793,
+    "high": 0.9849935639084458
+   },
+   "er_pair_recall_after_review": {
+    "k": 5042,
+    "n": 5067,
+    "rate": 0.9950661140714426,
+    "low": 0.9927263530396024,
+    "high": 0.9966557645165837
+   },
+   "rel_precision": {
+    "k": 2574,
+    "n": 2601,
+    "rate": 0.9896193771626297,
+    "low": 0.9849385340925466,
+    "high": 0.9928560465836832
+   },
+   "rel_accuracy_final": {
+    "k": 2599,
+    "n": 2626,
+    "rate": 0.9897182025894897,
+    "low": 0.9850815235558297,
+    "high": 0.9929241479644628
+   },
+   "rel_precision_ambiguous": {
+    "k": 410,
+    "n": 431,
+    "rate": 0.951276102088167,
+    "low": 0.9266647719372486,
+    "high": 0.967913851635105
+   },
+   "rel_precision_german": {
+    "k": 479,
+    "n": 481,
+    "rate": 0.9958419958419958,
+    "low": 0.9849674627315049,
+    "high": 0.9988590076043738
+   },
+   "link_precision": {
+    "k": 2094,
+    "n": 2154,
+    "rate": 0.9721448467966574,
+    "low": 0.9643103162511162,
+    "high": 0.9782982607639901
+   },
+   "event_precision": {
+    "k": 440,
+    "n": 456,
+    "rate": 0.9649122807017544,
+    "low": 0.9437676969806362,
+    "high": 0.9782889416531889
+   },
+   "event_recall": {
+    "k": 440,
+    "n": 601,
+    "rate": 0.7321131447587355,
+    "low": 0.6953141888789608,
+    "high": 0.7659636068282129
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.0008879341964965726,
+    "ci": [
+     0.0008879341964965726,
+     0.0008879341964965726,
+     0.0008879341964965726
+    ],
+    "per_seed": [
+     0.0008879341964965726
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 0.9904798172124905,
+    "ci": [
+     0.9904798172124905,
+     0.9904798172124905,
+     0.9904798172124905
+    ],
+    "per_seed": [
+     0.9904798172124905
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.00952018278750952,
+    "ci": [
+     0.00952018278750952,
+     0.00952018278750952,
+     0.00952018278750952
+    ],
+    "per_seed": [
+     0.00952018278750952
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.8202589489718203,
+    "ci": [
+     0.8202589489718203,
+     0.8202589489718203,
+     0.8202589489718203
+    ],
+    "per_seed": [
+     0.8202589489718203
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 19.152272727272727,
+    "ci": [
+     19.152272727272727,
+     19.152272727272727,
+     19.152272727272727
+    ],
+    "per_seed": [
+     19.152272727272727
+    ]
+   },
+   "gone_recommended": {
+    "mean": 2.0,
+    "ci": [
+     2.0,
+     2.0,
+     2.0
+    ],
+    "per_seed": [
+     2.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.9287912087912088,
+    "ci": [
+     0.9287912087912088,
+     0.9287912087912088,
+     0.9287912087912088
+    ],
+    "per_seed": [
+     0.9287912087912088
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 1.0,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 1.0,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.9187096774193548,
+    "domain": 0.9995159728944821,
+    "city": 1.0,
+    "country": 1.0,
+    "founded": 0.999508116084604,
+    "headcount": 0.9941491955143832,
+    "status": 0.9990314769975787
+   },
+   "review_items": {
+    "pairs": 246.0,
+    "articles": 25.0,
+    "links": 256.0
+   },
+   "rel_by_tier": {
+    "cheap": 441,
+    "rule": 1720,
+    "expensive": 440,
+    "person": 25
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 216,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 61,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 61,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 118,
+     "true": 172
+    }
+   },
+   "seconds": 2.1563999229997535
+  },
+  "missing_as_zero": {
+   "label": "Platform without backfills, counting a missing week of job posts as zero",
+   "er_pair_precision": {
+    "k": 4974,
+    "n": 4985,
+    "rate": 0.9977933801404213,
+    "low": 0.9960527218719873,
+    "high": 0.9987673982937842
+   },
+   "er_pair_recall": {
+    "k": 4974,
+    "n": 5067,
+    "rate": 0.9816459443457667,
+    "low": 0.9775685480691793,
+    "high": 0.9849935639084458
+   },
+   "er_pair_recall_after_review": {
+    "k": 5042,
+    "n": 5067,
+    "rate": 0.9950661140714426,
+    "low": 0.9927263530396024,
+    "high": 0.9966557645165837
+   },
+   "rel_precision": {
+    "k": 2413,
+    "n": 2439,
+    "rate": 0.989339893398934,
+    "low": 0.984425784836937,
+    "high": 0.9927149352162995
+   },
+   "rel_accuracy_final": {
+    "k": 2435,
+    "n": 2461,
+    "rate": 0.9894351889475823,
+    "low": 0.9845646021487908,
+    "high": 0.9927801489297368
+   },
+   "rel_precision_ambiguous": {
+    "k": 386,
+    "n": 406,
+    "rate": 0.9507389162561576,
+    "low": 0.9251399919047544,
+    "high": 0.9678879486459363
+   },
+   "rel_precision_german": {
+    "k": 446,
+    "n": 448,
+    "rate": 0.9955357142857143,
+    "low": 0.9838703430328064,
+    "high": 0.9987749025576838
+   },
+   "link_precision": {
+    "k": 1955,
+    "n": 2011,
+    "rate": 0.9721531576330183,
+    "low": 0.9640123376639838,
+    "high": 0.9784935149052703
+   },
+   "event_precision": {
+    "k": 488,
+    "n": 2304,
+    "rate": 0.21180555555555555,
+    "low": 0.19560827001075154,
+    "high": 0.22896228977116762
+   },
+   "event_recall": {
+    "k": 488,
+    "n": 601,
+    "rate": 0.8119800332778702,
+    "low": 0.7787961607435947,
+    "high": 0.8412008764972299
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.000891278992279561,
+    "ci": [
+     0.000891278992279561,
+     0.000891278992279561,
+     0.000891278992279561
+    ],
+    "per_seed": [
+     0.000891278992279561
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 0.9910605444941081,
+    "ci": [
+     0.9910605444941081,
+     0.9910605444941081,
+     0.9910605444941081
+    ],
+    "per_seed": [
+     0.9910605444941081
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.008939455505891914,
+    "ci": [
+     0.008939455505891914,
+     0.008939455505891914,
+     0.008939455505891914
+    ],
+    "per_seed": [
+     0.008939455505891914
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.8171475010158472,
+    "ci": [
+     0.8171475010158472,
+     0.8171475010158472,
+     0.8171475010158472
+    ],
+    "per_seed": [
+     0.8171475010158472
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 6.182377049180328,
+    "ci": [
+     6.182377049180328,
+     6.182377049180328,
+     6.182377049180328
+    ],
+    "per_seed": [
+     6.182377049180328
+    ]
+   },
+   "gone_recommended": {
+    "mean": 2.0,
+    "ci": [
+     2.0,
+     2.0,
+     2.0
+    ],
+    "per_seed": [
+     2.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.9287912087912088,
+    "ci": [
+     0.9287912087912088,
+     0.9287912087912088,
+     0.9287912087912088
+    ],
+    "per_seed": [
+     0.9287912087912088
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 0.9851308485329104,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 0.9371667936024372,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.9187096774193548,
+    "domain": 0.9995159728944821,
+    "city": 1.0,
+    "country": 1.0,
+    "founded": 0.999508116084604,
+    "headcount": 0.9936616284739151,
+    "status": 0.9990314769975787
+   },
+   "review_items": {
+    "pairs": 246.0,
+    "articles": 22.0,
+    "links": 239.0
+   },
+   "rel_by_tier": {
+    "cheap": 415,
+    "rule": 1607,
+    "expensive": 417,
+    "person": 22
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 214,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 61,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 61,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 1968,
+     "true": 172
+    }
+   },
+   "seconds": 1.8328603909999401
+  },
+  "no_dark_signal": {
+   "label": "Platform without the jobs-feed shutdown signal",
+   "er_pair_precision": {
+    "k": 4974,
+    "n": 4985,
+    "rate": 0.9977933801404213,
+    "low": 0.9960527218719873,
+    "high": 0.9987673982937842
+   },
+   "er_pair_recall": {
+    "k": 4974,
+    "n": 5067,
+    "rate": 0.9816459443457667,
+    "low": 0.9775685480691793,
+    "high": 0.9849935639084458
+   },
+   "er_pair_recall_after_review": {
+    "k": 5042,
+    "n": 5067,
+    "rate": 0.9950661140714426,
+    "low": 0.9927263530396024,
+    "high": 0.9966557645165837
+   },
+   "rel_precision": {
+    "k": 2574,
+    "n": 2601,
+    "rate": 0.9896193771626297,
+    "low": 0.9849385340925466,
+    "high": 0.9928560465836832
+   },
+   "rel_accuracy_final": {
+    "k": 2599,
+    "n": 2626,
+    "rate": 0.9897182025894897,
+    "low": 0.9850815235558297,
+    "high": 0.9929241479644628
+   },
+   "rel_precision_ambiguous": {
+    "k": 410,
+    "n": 431,
+    "rate": 0.951276102088167,
+    "low": 0.9266647719372486,
+    "high": 0.967913851635105
+   },
+   "rel_precision_german": {
+    "k": 479,
+    "n": 481,
+    "rate": 0.9958419958419958,
+    "low": 0.9849674627315049,
+    "high": 0.9988590076043738
+   },
+   "link_precision": {
+    "k": 2094,
+    "n": 2154,
+    "rate": 0.9721448467966574,
+    "low": 0.9643103162511162,
+    "high": 0.9782982607639901
+   },
+   "event_precision": {
+    "k": 436,
+    "n": 452,
+    "rate": 0.9646017699115044,
+    "low": 0.9432768975066895,
+    "high": 0.9780957898478652
+   },
+   "event_recall": {
+    "k": 436,
+    "n": 601,
+    "rate": 0.7254575707154742,
+    "low": 0.6884298831255017,
+    "high": 0.7596213091205343
+   },
+   "rel_cost_per_record_eur": {
+    "mean": 0.0008879341964965726,
+    "ci": [
+     0.0008879341964965726,
+     0.0008879341964965726,
+     0.0008879341964965726
+    ],
+    "per_seed": [
+     0.0008879341964965726
+    ]
+   },
+   "rel_auto_share": {
+    "mean": 0.9904798172124905,
+    "ci": [
+     0.9904798172124905,
+     0.9904798172124905,
+     0.9904798172124905
+    ],
+    "per_seed": [
+     0.9904798172124905
+    ]
+   },
+   "rel_review_share": {
+    "mean": 0.00952018278750952,
+    "ci": [
+     0.00952018278750952,
+     0.00952018278750952,
+     0.00952018278750952
+    ],
+    "per_seed": [
+     0.00952018278750952
+    ]
+   },
+   "link_coverage": {
+    "mean": 0.8202589489718203,
+    "ci": [
+     0.8202589489718203,
+     0.8202589489718203,
+     0.8202589489718203
+    ],
+    "per_seed": [
+     0.8202589489718203
+    ]
+   },
+   "event_date_mae_days": {
+    "mean": 3.4610091743119265,
+    "ci": [
+     3.4610091743119265,
+     3.4610091743119265,
+     3.4610091743119265
+    ],
+    "per_seed": [
+     3.4610091743119265
+    ]
+   },
+   "gone_recommended": {
+    "mean": 2.0,
+    "ci": [
+     2.0,
+     2.0,
+     2.0
+    ],
+    "per_seed": [
+     2.0
+    ]
+   },
+   "false_alerts": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "raw_duplicates": {
+    "mean": 0.0,
+    "ci": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "per_seed": [
+     0.0
+    ]
+   },
+   "max_hours_to_detect_outage": {
+    "mean": null,
+    "ci": null,
+    "per_seed": [
+     null
+    ]
+   },
+   "active_startups_recommendable": {
+    "mean": 0.9287912087912088,
+    "ci": [
+     0.9287912087912088,
+     0.9287912087912088,
+     0.9287912087912088
+    ],
+    "per_seed": [
+     0.9287912087912088
+    ]
+   },
+   "outages": [
+    [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ]
+   ],
+   "completeness": {
+    "vendor_profiles": 1.0,
+    "register_notices": 0.9946524064171123,
+    "news_mentions": 1.0,
+    "job_posts": 0.7527170077628793
+   },
+   "golden_accuracy": {
+    "name": 0.9187096774193548,
+    "domain": 0.9995159728944821,
+    "city": 1.0,
+    "country": 1.0,
+    "founded": 0.999508116084604,
+    "headcount": 0.9941491955143832,
+    "status": 0.9990295972828724
+   },
+   "review_items": {
+    "pairs": 246.0,
+    "articles": 25.0,
+    "links": 256.0
+   },
+   "rel_by_tier": {
+    "cheap": 441,
+    "rule": 1720,
+    "expensive": 440,
+    "person": 25
+   },
+   "events_by_kind": {
+    "funding": {
+     "predicted": 216,
+     "true": 304
+    },
+    "acquisition": {
+     "predicted": 61,
+     "true": 61
+    },
+    "shutdown": {
+     "predicted": 57,
+     "true": 64
+    },
+    "headcount": {
+     "predicted": 118,
+     "true": 172
+    }
+   },
+   "seconds": 2.031481256999996
+  }
+ },
+ "gates": [
+  {
+   "gate": "er_precision",
+   "metric": "er_pair_precision",
+   "direction": "min",
+   "threshold": 0.98,
+   "value": 0.9960527218719873,
+   "passed": true,
+   "why": "A wrong merge mixes two companies' funding and partners; it is worse than a missed one."
+  },
+  {
+   "gate": "er_recall",
+   "metric": "er_pair_recall",
+   "direction": "min",
+   "threshold": 0.85,
+   "value": 0.9775685480691793,
+   "passed": true,
+   "why": "Duplicates that slip through split a company's signals and clutter search."
+  },
+  {
+   "gate": "relationship_precision",
+   "metric": "rel_precision",
+   "direction": "min",
+   "threshold": 0.9,
+   "value": 0.9849385340925466,
+   "passed": true,
+   "why": "Relationship types drive PoC tracking and recommendations; a mislabelled acquisition is visible to customers."
+  },
+  {
+   "gate": "cost_per_record",
+   "metric": "rel_cost_per_record_eur",
+   "direction": "max",
+   "threshold": 0.004,
+   "value": 0.0008879341964965726,
+   "passed": true,
+   "why": "Classifying the backlog and the daily inflow must stay within budget."
+  },
+  {
+   "gate": "outage_detection",
+   "metric": "max_hours_to_detect_outage",
+   "direction": "max",
+   "threshold": 36,
+   "value": null,
+   "passed": false,
+   "why": "A feed that stops must alert within about a day and a half, not when a customer notices."
+  },
+  {
+   "gate": "event_date_error",
+   "metric": "event_date_mae_days",
+   "direction": "max",
+   "threshold": 7,
+   "value": 2.3431818181818183,
+   "passed": true,
+   "why": "Signals are sorted and alerted by date; a funding round dated by ingestion is weeks late."
+  },
+  {
+   "gate": "gone_in_recommendations",
+   "metric": "gone_recommended",
+   "direction": "max",
+   "threshold": 0,
+   "value": 2.0,
+   "passed": false,
+   "why": "Recommending a startup that was acquired or shut down a week or more ago embarrasses the customer."
+  }
+ ],
+ "per_seed": [
+  {
+   "status_quo": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 51,
+      "by": "weekly_look"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 171,
+      "by": "weekly_look"
+     }
+    ],
+    "false_alerts": 1,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 0.9851308485329104,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 0.9371667936024372,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 174,
+    "raw_rows": 30694,
+    "er": {
+     "auto": {
+      "tp": 3071,
+      "pred": 3893,
+      "true": 5067
+     },
+     "final": {
+      "tp": 3071,
+      "pred": 3893,
+      "true": 5067
+     },
+     "review_pairs": 0,
+     "refused": 0,
+     "entities": 3453,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 3071,
+     "n": 3893,
+     "rate": 0.788851785255587,
+     "low": 0.7757496761869821,
+     "high": 0.8013843802755644
+    },
+    "er_pair_recall": {
+     "k": 3071,
+     "n": 5067,
+     "rate": 0.6060785474639826,
+     "low": 0.5925490883897226,
+     "high": 0.6194472792349335
+    },
+    "er_pair_recall_after_review": {
+     "k": 3071,
+     "n": 5067,
+     "rate": 0.6060785474639826,
+     "low": 0.5925490883897226,
+     "high": 0.6194472792349335
+    },
+    "rel_precision": {
+     "k": 1738,
+     "n": 2461,
+     "rate": 0.7062169849654611,
+     "low": 0.6879104636236958,
+     "high": 0.7238807038087266
+    },
+    "rel_auto_share": 1.0,
+    "rel_review_share": 0.0,
+    "rel_cost_per_record_eur": 0.0,
+    "rel_accuracy_final": {
+     "k": 1738,
+     "n": 2461,
+     "rate": 0.7062169849654611,
+     "low": 0.6879104636236958,
+     "high": 0.7238807038087266
+    },
+    "rel_by_tier": {
+     "rule": 2461
+    },
+    "rel_precision_ambiguous": {
+     "k": 0,
+     "n": 426,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.008937245720283937
+    },
+    "rel_precision_german": {
+     "k": 291,
+     "n": 452,
+     "rate": 0.6438053097345132,
+     "low": 0.5986154343848362,
+     "high": 0.6865713497963355
+    },
+    "link_precision": {
+     "k": 1535,
+     "n": 1639,
+     "rate": 0.9365466748017084,
+     "low": 0.9236934714106484,
+     "high": 0.9473582477569207
+    },
+    "link_coverage": 0.6659894351889476,
+    "events": {
+     "predicted": 2329,
+     "true": 601,
+     "matched": 457
+    },
+    "event_precision": {
+     "k": 457,
+     "n": 2329,
+     "rate": 0.19622155431515673,
+     "low": 0.1805981230702711,
+     "high": 0.21284547807264406
+    },
+    "event_recall": {
+     "k": 457,
+     "n": 601,
+     "rate": 0.7603993344425957,
+     "low": 0.7246879261464638,
+     "high": 0.7928029342705445
+    },
+    "event_date_mae_days": 24.86433260393873,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 216,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 141,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 88,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 1884,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.8910891089108911,
+     "domain": 0.9722502522704339,
+     "city": 0.9815188172043011,
+     "country": 0.991263440860215,
+     "founded": 0.9744125326370757,
+     "headcount": 0.970954356846473,
+     "status": 0.9964664310954063
+    },
+    "gone_recommended": 157,
+    "active_startups_recommendable": 0.9151648351648352,
+    "review_items": {
+     "pairs": 0,
+     "articles": 0,
+     "links": 0
+    },
+    "stage_seconds": {
+     "ingest": 0.14360630200008018,
+     "resolve": 0.10729215399987879,
+     "classify": 0.3594447460000083,
+     "signals": 0.28533943999991607
+    },
+    "seconds": 1.1334596219999185
+   },
+   "model_alone": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ],
+    "false_alerts": 0,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 1.0,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 1.0,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 0,
+    "raw_rows": 30676,
+    "er": {
+     "auto": {
+      "tp": 4974,
+      "pred": 4985,
+      "true": 5067
+     },
+     "final": {
+      "tp": 4974,
+      "pred": 4985,
+      "true": 5067
+     },
+     "review_pairs": 246,
+     "refused": 10,
+     "entities": 2571,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 4974,
+     "n": 4985,
+     "rate": 0.9977933801404213,
+     "low": 0.9960527218719873,
+     "high": 0.9987673982937842
+    },
+    "er_pair_recall": {
+     "k": 4974,
+     "n": 5067,
+     "rate": 0.9816459443457667,
+     "low": 0.9775685480691793,
+     "high": 0.9849935639084458
+    },
+    "er_pair_recall_after_review": {
+     "k": 4974,
+     "n": 5067,
+     "rate": 0.9816459443457667,
+     "low": 0.9775685480691793,
+     "high": 0.9849935639084458
+    },
+    "rel_precision": {
+     "k": 2534,
+     "n": 2626,
+     "rate": 0.964965727341965,
+     "low": 0.9572263857536653,
+     "high": 0.9713466507364413
+    },
+    "rel_auto_share": 1.0,
+    "rel_review_share": 0.0,
+    "rel_cost_per_record_eur": 0.004493425361766945,
+    "rel_accuracy_final": {
+     "k": 2534,
+     "n": 2626,
+     "rate": 0.964965727341965,
+     "low": 0.9572263857536653,
+     "high": 0.9713466507364413
+    },
+    "rel_by_tier": {
+     "expensive": 2626
+    },
+    "rel_precision_ambiguous": {
+     "k": 404,
+     "n": 454,
+     "rate": 0.8898678414096917,
+     "low": 0.8577346230796646,
+     "high": 0.9154585511535199
+    },
+    "rel_precision_german": {
+     "k": 472,
+     "n": 485,
+     "rate": 0.9731958762886598,
+     "low": 0.9546845096866755,
+     "high": 0.9842699491809822
+    },
+    "link_precision": {
+     "k": 1858,
+     "n": 1915,
+     "rate": 0.9702349869451697,
+     "low": 0.9616317457684138,
+     "high": 0.976955368457169
+    },
+    "link_coverage": 0.7292460015232293,
+    "events": {
+     "predicted": 461,
+     "true": 601,
+     "matched": 440
+    },
+    "event_precision": {
+     "k": 440,
+     "n": 461,
+     "rate": 0.9544468546637744,
+     "low": 0.931367034412803,
+     "high": 0.9700152859302987
+    },
+    "event_recall": {
+     "k": 440,
+     "n": 601,
+     "rate": 0.7321131447587355,
+     "low": 0.6953141888789608,
+     "high": 0.7659636068282129
+    },
+    "event_date_mae_days": 2.352272727272727,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 216,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 64,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 63,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 118,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.9183848797250859,
+     "domain": 0.9995159728944821,
+     "city": 1.0,
+     "country": 1.0,
+     "founded": 0.999508116084604,
+     "headcount": 0.9941491955143832,
+     "status": 0.9980657640232108
+    },
+    "gone_recommended": 2,
+    "active_startups_recommendable": 0.9279120879120879,
+    "review_items": {
+     "pairs": 0,
+     "articles": 0,
+     "links": 0
+    },
+    "stage_seconds": {
+     "ingest": 0.13527223200026128,
+     "resolve": 0.8089354220001042,
+     "classify": 0.29345509199993103,
+     "signals": 0.215644202999556
+    },
+    "seconds": 1.67310390800003
+   },
+   "cheap_model_alone": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ],
+    "false_alerts": 0,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 1.0,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 1.0,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 0,
+    "raw_rows": 30676,
+    "er": {
+     "auto": {
+      "tp": 4974,
+      "pred": 4985,
+      "true": 5067
+     },
+     "final": {
+      "tp": 4974,
+      "pred": 4985,
+      "true": 5067
+     },
+     "review_pairs": 246,
+     "refused": 10,
+     "entities": 2571,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 4974,
+     "n": 4985,
+     "rate": 0.9977933801404213,
+     "low": 0.9960527218719873,
+     "high": 0.9987673982937842
+    },
+    "er_pair_recall": {
+     "k": 4974,
+     "n": 5067,
+     "rate": 0.9816459443457667,
+     "low": 0.9775685480691793,
+     "high": 0.9849935639084458
+    },
+    "er_pair_recall_after_review": {
+     "k": 4974,
+     "n": 5067,
+     "rate": 0.9816459443457667,
+     "low": 0.9775685480691793,
+     "high": 0.9849935639084458
+    },
+    "rel_precision": {
+     "k": 2317,
+     "n": 2626,
+     "rate": 0.8823305407463823,
+     "low": 0.8694442606406291,
+     "high": 0.8940998250563955
+    },
+    "rel_auto_share": 1.0,
+    "rel_review_share": 0.0,
+    "rel_cost_per_record_eur": 0.00024074028941355676,
+    "rel_accuracy_final": {
+     "k": 2317,
+     "n": 2626,
+     "rate": 0.8823305407463823,
+     "low": 0.8694442606406291,
+     "high": 0.8940998250563955
+    },
+    "rel_by_tier": {
+     "cheap": 2626
+    },
+    "rel_precision_ambiguous": {
+     "k": 319,
+     "n": 454,
+     "rate": 0.7026431718061674,
+     "low": 0.6590381697818822,
+     "high": 0.742847547898643
+    },
+    "rel_precision_german": {
+     "k": 429,
+     "n": 485,
+     "rate": 0.8845360824742268,
+     "low": 0.8530230496975564,
+     "high": 0.9100053014084051
+    },
+    "link_precision": {
+     "k": 1858,
+     "n": 1915,
+     "rate": 0.9702349869451697,
+     "low": 0.9616317457684138,
+     "high": 0.976955368457169
+    },
+    "link_coverage": 0.7292460015232293,
+    "events": {
+     "predicted": 468,
+     "true": 601,
+     "matched": 440
+    },
+    "event_precision": {
+     "k": 440,
+     "n": 468,
+     "rate": 0.9401709401709402,
+     "low": 0.9148890137801853,
+     "high": 0.9582853735565819
+    },
+    "event_recall": {
+     "k": 440,
+     "n": 601,
+     "rate": 0.7321131447587355,
+     "low": 0.6953141888789608,
+     "high": 0.7659636068282129
+    },
+    "event_date_mae_days": 2.422727272727273,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 216,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 71,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 63,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 118,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.9183848797250859,
+     "domain": 0.9995159728944821,
+     "city": 1.0,
+     "country": 1.0,
+     "founded": 0.999508116084604,
+     "headcount": 0.9941491955143832,
+     "status": 0.9946911196911197
+    },
+    "gone_recommended": 2,
+    "active_startups_recommendable": 0.9257142857142857,
+    "review_items": {
+     "pairs": 0,
+     "articles": 0,
+     "links": 0
+    },
+    "stage_seconds": {
+     "ingest": 0.1286198139996486,
+     "resolve": 0.8182781289997365,
+     "classify": 0.31895899900018776,
+     "signals": 0.3133922829997573
+    },
+    "seconds": 1.8223839150000458
+   },
+   "platform": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ],
+    "false_alerts": 0,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 1.0,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 1.0,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 0,
+    "raw_rows": 30676,
+    "er": {
+     "auto": {
+      "tp": 4974,
+      "pred": 4985,
+      "true": 5067
+     },
+     "final": {
+      "tp": 5042,
+      "pred": 5053,
+      "true": 5067
+     },
+     "review_pairs": 246,
+     "refused": 10,
+     "entities": 2506,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 4974,
+     "n": 4985,
+     "rate": 0.9977933801404213,
+     "low": 0.9960527218719873,
+     "high": 0.9987673982937842
+    },
+    "er_pair_recall": {
+     "k": 4974,
+     "n": 5067,
+     "rate": 0.9816459443457667,
+     "low": 0.9775685480691793,
+     "high": 0.9849935639084458
+    },
+    "er_pair_recall_after_review": {
+     "k": 5042,
+     "n": 5067,
+     "rate": 0.9950661140714426,
+     "low": 0.9927263530396024,
+     "high": 0.9966557645165837
+    },
+    "rel_precision": {
+     "k": 2574,
+     "n": 2601,
+     "rate": 0.9896193771626297,
+     "low": 0.9849385340925466,
+     "high": 0.9928560465836832
+    },
+    "rel_auto_share": 0.9904798172124905,
+    "rel_review_share": 0.00952018278750952,
+    "rel_cost_per_record_eur": 0.0008879341964965726,
+    "rel_accuracy_final": {
+     "k": 2599,
+     "n": 2626,
+     "rate": 0.9897182025894897,
+     "low": 0.9850815235558297,
+     "high": 0.9929241479644628
+    },
+    "rel_by_tier": {
+     "cheap": 441,
+     "rule": 1720,
+     "expensive": 440,
+     "person": 25
+    },
+    "rel_precision_ambiguous": {
+     "k": 410,
+     "n": 431,
+     "rate": 0.951276102088167,
+     "low": 0.9266647719372486,
+     "high": 0.967913851635105
+    },
+    "rel_precision_german": {
+     "k": 479,
+     "n": 481,
+     "rate": 0.9958419958419958,
+     "low": 0.9849674627315049,
+     "high": 0.9988590076043738
+    },
+    "link_precision": {
+     "k": 2094,
+     "n": 2154,
+     "rate": 0.9721448467966574,
+     "low": 0.9643103162511162,
+     "high": 0.9782982607639901
+    },
+    "link_coverage": 0.8202589489718203,
+    "events": {
+     "predicted": 456,
+     "true": 601,
+     "matched": 440
+    },
+    "event_precision": {
+     "k": 440,
+     "n": 456,
+     "rate": 0.9649122807017544,
+     "low": 0.9437676969806362,
+     "high": 0.9782889416531889
+    },
+    "event_recall": {
+     "k": 440,
+     "n": 601,
+     "rate": 0.7321131447587355,
+     "low": 0.6953141888789608,
+     "high": 0.7659636068282129
+    },
+    "event_date_mae_days": 2.3431818181818183,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 216,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 61,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 61,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 118,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.9187096774193548,
+     "domain": 0.9995159728944821,
+     "city": 1.0,
+     "country": 1.0,
+     "founded": 0.999508116084604,
+     "headcount": 0.9941491955143832,
+     "status": 0.9990314769975787
+    },
+    "gone_recommended": 2,
+    "active_startups_recommendable": 0.9287912087912088,
+    "review_items": {
+     "pairs": 246,
+     "articles": 25,
+     "links": 256
+    },
+    "stage_seconds": {
+     "ingest": 0.1571902199998476,
+     "resolve": 1.0293300769999405,
+     "classify": 0.3985761960002492,
+     "signals": 0.2553220700001475
+    },
+    "seconds": 2.066093050999825,
+    "vendors": [
+     {
+      "feed": "vendor_profiles",
+      "records_billed": 5313,
+      "spend_eur": 106.26,
+      "companies": 2052,
+      "only_here": 75,
+      "correct_datapoints": 15280,
+      "eur_per_correct_datapoint": 0.00695
+     },
+     {
+      "feed": "register_notices",
+      "records_billed": 1674,
+      "spend_eur": 6.7,
+      "companies": 1544,
+      "only_here": 0,
+      "correct_datapoints": 6073,
+      "eur_per_correct_datapoint": 0.0011
+     },
+     {
+      "feed": "news_mentions",
+      "records_billed": 2626,
+      "spend_eur": 2.63,
+      "companies": 0,
+      "only_here": 0,
+      "correct_datapoints": 2081,
+      "eur_per_correct_datapoint": 0.00126
+     },
+     {
+      "feed": "job_posts",
+      "records_billed": 21332,
+      "spend_eur": 10.67,
+      "companies": 2400,
+      "only_here": 167,
+      "correct_datapoints": 21332,
+      "eur_per_correct_datapoint": 0.0005
+     }
+    ],
+    "search": {
+     "queries": 600,
+     "exact": {
+      "recall_at_1": {
+       "k": 96,
+       "n": 600,
+       "rate": 0.16,
+       "low": 0.1328420297859674,
+       "high": 0.19148408487721583
+      },
+      "recall_at_5": {
+       "k": 108,
+       "n": 600,
+       "rate": 0.18,
+       "low": 0.15132481221976815,
+       "high": 0.21274682511028667
+      }
+     },
+     "normalised": {
+      "recall_at_1": {
+       "k": 217,
+       "n": 600,
+       "rate": 0.3616666666666667,
+       "low": 0.3242124780499538,
+       "high": 0.4008809901708512
+      },
+      "recall_at_5": {
+       "k": 270,
+       "n": 600,
+       "rate": 0.45,
+       "low": 0.4106358628051308,
+       "high": 0.4900003305276904
+      }
+     },
+     "fuzzy": {
+      "recall_at_1": {
+       "k": 365,
+       "n": 600,
+       "rate": 0.6083333333333333,
+       "low": 0.5687045041521013,
+       "high": 0.6465837436267863
+      },
+      "recall_at_5": {
+       "k": 490,
+       "n": 600,
+       "rate": 0.8166666666666667,
+       "low": 0.7837234033612118,
+       "high": 0.8455807055309216
+      }
+     },
+     "examples": [
+      "Genstoli Logistics AB",
+      "Lixionqua",
+      "Tekar",
+      "Nekra",
+      "Tekva",
+      "Dorntufi Materials GmbH",
+      "Br\u00fcckner Materials GmbH",
+      "Sonnenh\u00f6he Mobility AG"
+     ]
+    }
+   },
+   "no_aliases": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ],
+    "false_alerts": 0,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 1.0,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 1.0,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 0,
+    "raw_rows": 30676,
+    "er": {
+     "auto": {
+      "tp": 4898,
+      "pred": 4917,
+      "true": 5067
+     },
+     "final": {
+      "tp": 4965,
+      "pred": 4984,
+      "true": 5067
+     },
+     "review_pairs": 235,
+     "refused": 2,
+     "entities": 2548,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 4898,
+     "n": 4917,
+     "rate": 0.9961358551962579,
+     "low": 0.9939722942802073,
+     "high": 0.9975247699618118
+    },
+    "er_pair_recall": {
+     "k": 4898,
+     "n": 5067,
+     "rate": 0.9666469311229524,
+     "low": 0.9613386053340921,
+     "high": 0.9712482062910234
+    },
+    "er_pair_recall_after_review": {
+     "k": 4965,
+     "n": 5067,
+     "rate": 0.9798697454114861,
+     "low": 0.9756234751082218,
+     "high": 0.9833889302487113
+    },
+    "rel_precision": {
+     "k": 2574,
+     "n": 2601,
+     "rate": 0.9896193771626297,
+     "low": 0.9849385340925466,
+     "high": 0.9928560465836832
+    },
+    "rel_auto_share": 0.9904798172124905,
+    "rel_review_share": 0.00952018278750952,
+    "rel_cost_per_record_eur": 0.0008879341964965726,
+    "rel_accuracy_final": {
+     "k": 2599,
+     "n": 2626,
+     "rate": 0.9897182025894897,
+     "low": 0.9850815235558297,
+     "high": 0.9929241479644628
+    },
+    "rel_by_tier": {
+     "cheap": 441,
+     "rule": 1720,
+     "expensive": 440,
+     "person": 25
+    },
+    "rel_precision_ambiguous": {
+     "k": 410,
+     "n": 431,
+     "rate": 0.951276102088167,
+     "low": 0.9266647719372486,
+     "high": 0.967913851635105
+    },
+    "rel_precision_german": {
+     "k": 479,
+     "n": 481,
+     "rate": 0.9958419958419958,
+     "low": 0.9849674627315049,
+     "high": 0.9988590076043738
+    },
+    "link_precision": {
+     "k": 2099,
+     "n": 2157,
+     "rate": 0.9731108020398702,
+     "low": 0.9653975500565283,
+     "high": 0.9791418368194001
+    },
+    "link_coverage": 0.8214013709063214,
+    "events": {
+     "predicted": 460,
+     "true": 601,
+     "matched": 440
+    },
+    "event_precision": {
+     "k": 440,
+     "n": 460,
+     "rate": 0.9565217391304348,
+     "low": 0.9338005280866175,
+     "high": 0.9716809983655161
+    },
+    "event_recall": {
+     "k": 440,
+     "n": 601,
+     "rate": 0.7321131447587355,
+     "low": 0.6953141888789608,
+     "high": 0.7659636068282129
+    },
+    "event_date_mae_days": 2.3431818181818183,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 216,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 64,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 62,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 118,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.9066213921901528,
+     "domain": 0.9990314769975787,
+     "city": 0.9995728321230244,
+     "country": 0.9995728321230244,
+     "founded": 0.9990157480314961,
+     "headcount": 0.9936585365853658,
+     "status": 0.9990328820116054
+    },
+    "gone_recommended": 2,
+    "active_startups_recommendable": 0.9292307692307692,
+    "review_items": {
+     "pairs": 235,
+     "articles": 25,
+     "links": 254
+    },
+    "stage_seconds": {
+     "ingest": 0.19177556800013917,
+     "resolve": 0.9297681230000308,
+     "classify": 0.43259207699975377,
+     "signals": 0.33998564400008036
+    },
+    "seconds": 2.1395139659998677
+   },
+   "no_renormalise": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ],
+    "false_alerts": 0,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 1.0,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 1.0,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 0,
+    "raw_rows": 30676,
+    "er": {
+     "auto": {
+      "tp": 2339,
+      "pred": 2355,
+      "true": 5067
+     },
+     "final": {
+      "tp": 2439,
+      "pred": 2455,
+      "true": 5067
+     },
+     "review_pairs": 534,
+     "refused": 0,
+     "entities": 3779,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 2339,
+     "n": 2355,
+     "rate": 0.9932059447983015,
+     "low": 0.9889917322224748,
+     "high": 0.9958136909140343
+    },
+    "er_pair_recall": {
+     "k": 2339,
+     "n": 5067,
+     "rate": 0.46161436747582396,
+     "low": 0.4479218902724685,
+     "high": 0.4753650055359116
+    },
+    "er_pair_recall_after_review": {
+     "k": 2439,
+     "n": 5067,
+     "rate": 0.48134991119005327,
+     "low": 0.46761146737755266,
+     "high": 0.49511661310518207
+    },
+    "rel_precision": {
+     "k": 2574,
+     "n": 2601,
+     "rate": 0.9896193771626297,
+     "low": 0.9849385340925466,
+     "high": 0.9928560465836832
+    },
+    "rel_auto_share": 0.9904798172124905,
+    "rel_review_share": 0.00952018278750952,
+    "rel_cost_per_record_eur": 0.0008879341964965726,
+    "rel_accuracy_final": {
+     "k": 2599,
+     "n": 2626,
+     "rate": 0.9897182025894897,
+     "low": 0.9850815235558297,
+     "high": 0.9929241479644628
+    },
+    "rel_by_tier": {
+     "cheap": 441,
+     "rule": 1720,
+     "expensive": 440,
+     "person": 25
+    },
+    "rel_precision_ambiguous": {
+     "k": 410,
+     "n": 431,
+     "rate": 0.951276102088167,
+     "low": 0.9266647719372486,
+     "high": 0.967913851635105
+    },
+    "rel_precision_german": {
+     "k": 479,
+     "n": 481,
+     "rate": 0.9958419958419958,
+     "low": 0.9849674627315049,
+     "high": 0.9988590076043738
+    },
+    "link_precision": {
+     "k": 1866,
+     "n": 1900,
+     "rate": 0.9821052631578947,
+     "low": 0.9750985218450666,
+     "high": 0.9871664060775084
+    },
+    "link_coverage": 0.7235338918507236,
+    "events": {
+     "predicted": 518,
+     "true": 601,
+     "matched": 440
+    },
+    "event_precision": {
+     "k": 440,
+     "n": 518,
+     "rate": 0.8494208494208494,
+     "low": 0.8160556020015108,
+     "high": 0.8776414892231059
+    },
+    "event_recall": {
+     "k": 440,
+     "n": 601,
+     "rate": 0.7321131447587355,
+     "low": 0.6953141888789608,
+     "high": 0.7659636068282129
+    },
+    "event_date_mae_days": 2.3363636363636364,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 216,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 92,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 92,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 118,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.9080587094987538,
+     "domain": 1.0,
+     "city": 0.996384872080089,
+     "country": 0.996662958843159,
+     "founded": 1.0,
+     "headcount": 0.9946393762183235,
+     "status": 0.9985908877407234
+    },
+    "gone_recommended": 9,
+    "active_startups_recommendable": 0.9345054945054945,
+    "review_items": {
+     "pairs": 534,
+     "articles": 25,
+     "links": 412
+    },
+    "stage_seconds": {
+     "ingest": 0.1824660249999397,
+     "resolve": 0.9136684850000165,
+     "classify": 0.3521643320000294,
+     "signals": 0.26281519399981335
+    },
+    "seconds": 1.9478836709999996
+   },
+   "no_transliteration": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ],
+    "false_alerts": 0,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 1.0,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 1.0,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 0,
+    "raw_rows": 30676,
+    "er": {
+     "auto": {
+      "tp": 4680,
+      "pred": 4691,
+      "true": 5067
+     },
+     "final": {
+      "tp": 4689,
+      "pred": 4700,
+      "true": 5067
+     },
+     "review_pairs": 71,
+     "refused": 10,
+     "entities": 2725,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 4680,
+     "n": 4691,
+     "rate": 0.9976550842037945,
+     "low": 0.9958056276483346,
+     "high": 0.9986901184914286
+    },
+    "er_pair_recall": {
+     "k": 4680,
+     "n": 5067,
+     "rate": 0.9236234458259325,
+     "low": 0.9159850327810023,
+     "high": 0.9306199962540201
+    },
+    "er_pair_recall_after_review": {
+     "k": 4689,
+     "n": 5067,
+     "rate": 0.9253996447602132,
+     "low": 0.9178383113500588,
+     "high": 0.9323164243056556
+    },
+    "rel_precision": {
+     "k": 2574,
+     "n": 2601,
+     "rate": 0.9896193771626297,
+     "low": 0.9849385340925466,
+     "high": 0.9928560465836832
+    },
+    "rel_auto_share": 0.9904798172124905,
+    "rel_review_share": 0.00952018278750952,
+    "rel_cost_per_record_eur": 0.0008879341964965726,
+    "rel_accuracy_final": {
+     "k": 2599,
+     "n": 2626,
+     "rate": 0.9897182025894897,
+     "low": 0.9850815235558297,
+     "high": 0.9929241479644628
+    },
+    "rel_by_tier": {
+     "cheap": 441,
+     "rule": 1720,
+     "expensive": 440,
+     "person": 25
+    },
+    "rel_precision_ambiguous": {
+     "k": 410,
+     "n": 431,
+     "rate": 0.951276102088167,
+     "low": 0.9266647719372486,
+     "high": 0.967913851635105
+    },
+    "rel_precision_german": {
+     "k": 479,
+     "n": 481,
+     "rate": 0.9958419958419958,
+     "low": 0.9849674627315049,
+     "high": 0.9988590076043738
+    },
+    "link_precision": {
+     "k": 2078,
+     "n": 2138,
+     "rate": 0.9719363891487371,
+     "low": 0.9640444501920149,
+     "high": 0.9781354010164032
+    },
+    "link_coverage": 0.8141660319878141,
+    "events": {
+     "predicted": 465,
+     "true": 601,
+     "matched": 440
+    },
+    "event_precision": {
+     "k": 440,
+     "n": 465,
+     "rate": 0.946236559139785,
+     "low": 0.9218386193486198,
+     "high": 0.9633217418479977
+    },
+    "event_recall": {
+     "k": 440,
+     "n": 601,
+     "rate": 0.7321131447587355,
+     "low": 0.6953141888789608,
+     "high": 0.7659636068282129
+    },
+    "event_date_mae_days": 2.3431818181818183,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 216,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 66,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 65,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 118,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.9174125305126118,
+     "domain": 0.9995159728944821,
+     "city": 1.0,
+     "country": 1.0,
+     "founded": 0.999508116084604,
+     "headcount": 0.9941491955143832,
+     "status": 0.9990356798457087
+    },
+    "gone_recommended": 3,
+    "active_startups_recommendable": 0.9287912087912088,
+    "review_items": {
+     "pairs": 71,
+     "articles": 25,
+     "links": 238
+    },
+    "stage_seconds": {
+     "ingest": 0.1944775120000486,
+     "resolve": 0.6846130769999945,
+     "classify": 0.40838985800019145,
+     "signals": 0.3379574880000291
+    },
+    "seconds": 1.836883016000229
+   },
+   "fuzzy_name_only": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ],
+    "false_alerts": 0,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 1.0,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 1.0,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 0,
+    "raw_rows": 30676,
+    "er": {
+     "auto": {
+      "tp": 4177,
+      "pred": 8984,
+      "true": 5067
+     },
+     "final": {
+      "tp": 4265,
+      "pred": 9072,
+      "true": 5067
+     },
+     "review_pairs": 1139,
+     "refused": 2177,
+     "entities": 2415,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 4177,
+     "n": 8984,
+     "rate": 0.46493766696349065,
+     "low": 0.45464099822296056,
+     "high": 0.4752643085194279
+    },
+    "er_pair_recall": {
+     "k": 4177,
+     "n": 5067,
+     "rate": 0.8243536609433589,
+     "low": 0.81363153965809,
+     "high": 0.8345843304649285
+    },
+    "er_pair_recall_after_review": {
+     "k": 4265,
+     "n": 5067,
+     "rate": 0.8417209394118808,
+     "low": 0.8314122893905477,
+     "high": 0.8515118232459028
+    },
+    "rel_precision": {
+     "k": 2574,
+     "n": 2601,
+     "rate": 0.9896193771626297,
+     "low": 0.9849385340925466,
+     "high": 0.9928560465836832
+    },
+    "rel_auto_share": 0.9904798172124905,
+    "rel_review_share": 0.00952018278750952,
+    "rel_cost_per_record_eur": 0.0008879341964965726,
+    "rel_accuracy_final": {
+     "k": 2599,
+     "n": 2626,
+     "rate": 0.9897182025894897,
+     "low": 0.9850815235558297,
+     "high": 0.9929241479644628
+    },
+    "rel_by_tier": {
+     "cheap": 441,
+     "rule": 1720,
+     "expensive": 440,
+     "person": 25
+    },
+    "rel_precision_ambiguous": {
+     "k": 410,
+     "n": 431,
+     "rate": 0.951276102088167,
+     "low": 0.9266647719372486,
+     "high": 0.967913851635105
+    },
+    "rel_precision_german": {
+     "k": 479,
+     "n": 481,
+     "rate": 0.9958419958419958,
+     "low": 0.9849674627315049,
+     "high": 0.9988590076043738
+    },
+    "link_precision": {
+     "k": 1862,
+     "n": 2203,
+     "rate": 0.8452110758057195,
+     "low": 0.8295070096171796,
+     "high": 0.8597132769679564
+    },
+    "link_coverage": 0.8389185072353389,
+    "events": {
+     "predicted": 438,
+     "true": 601,
+     "matched": 363
+    },
+    "event_precision": {
+     "k": 363,
+     "n": 438,
+     "rate": 0.8287671232876712,
+     "low": 0.7906662205346986,
+     "high": 0.8611510823177264
+    },
+    "event_recall": {
+     "k": 363,
+     "n": 601,
+     "rate": 0.6039933444259568,
+     "low": 0.564350768018376,
+     "high": 0.642314911061899
+    },
+    "event_date_mae_days": 2.283746556473829,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 209,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 66,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 68,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 95,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.9116447666515632,
+     "domain": 0.9175891758917589,
+     "city": 0.9639598540145985,
+     "country": 0.9712591240875912,
+     "founded": 0.9214463840399002,
+     "headcount": 0.925512104283054,
+     "status": 0.9871873093349604
+    },
+    "gone_recommended": 3,
+    "active_startups_recommendable": 0.8637362637362638,
+    "review_items": {
+     "pairs": 1139,
+     "articles": 25,
+     "links": 226
+    },
+    "stage_seconds": {
+     "ingest": 0.14635179200013226,
+     "resolve": 0.6720103930001642,
+     "classify": 0.36676904200021454,
+     "signals": 0.2550878600000033
+    },
+    "seconds": 1.6691262919998735
+   },
+   "no_rules": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ],
+    "false_alerts": 0,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 1.0,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 1.0,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 0,
+    "raw_rows": 30676,
+    "er": {
+     "auto": {
+      "tp": 4974,
+      "pred": 4985,
+      "true": 5067
+     },
+     "final": {
+      "tp": 5042,
+      "pred": 5053,
+      "true": 5067
+     },
+     "review_pairs": 246,
+     "refused": 10,
+     "entities": 2506,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 4974,
+     "n": 4985,
+     "rate": 0.9977933801404213,
+     "low": 0.9960527218719873,
+     "high": 0.9987673982937842
+    },
+    "er_pair_recall": {
+     "k": 4974,
+     "n": 5067,
+     "rate": 0.9816459443457667,
+     "low": 0.9775685480691793,
+     "high": 0.9849935639084458
+    },
+    "er_pair_recall_after_review": {
+     "k": 5042,
+     "n": 5067,
+     "rate": 0.9950661140714426,
+     "low": 0.9927263530396024,
+     "high": 0.9966557645165837
+    },
+    "rel_precision": {
+     "k": 2546,
+     "n": 2591,
+     "rate": 0.9826321883442686,
+     "low": 0.9768405972326648,
+     "high": 0.9869947289776133
+    },
+    "rel_auto_share": 0.9866717440974867,
+    "rel_review_share": 0.013328255902513329,
+    "rel_cost_per_record_eur": 0.0024225948210205633,
+    "rel_accuracy_final": {
+     "k": 2581,
+     "n": 2626,
+     "rate": 0.9828636709824828,
+     "low": 0.9771482432990282,
+     "high": 0.9871683908282898
+    },
+    "rel_by_tier": {
+     "cheap": 1357,
+     "expensive": 1234,
+     "person": 35
+    },
+    "rel_precision_ambiguous": {
+     "k": 410,
+     "n": 431,
+     "rate": 0.951276102088167,
+     "low": 0.9266647719372486,
+     "high": 0.967913851635105
+    },
+    "rel_precision_german": {
+     "k": 474,
+     "n": 479,
+     "rate": 0.9895615866388309,
+     "low": 0.9757996538061158,
+     "high": 0.9955333879201977
+    },
+    "link_precision": {
+     "k": 2097,
+     "n": 2157,
+     "rate": 0.972183588317107,
+     "low": 0.9643597290389577,
+     "high": 0.9783285272404475
+    },
+    "link_coverage": 0.8214013709063214,
+    "events": {
+     "predicted": 457,
+     "true": 601,
+     "matched": 440
+    },
+    "event_precision": {
+     "k": 440,
+     "n": 457,
+     "rate": 0.962800875273523,
+     "low": 0.9412386409568234,
+     "high": 0.9766472443451979
+    },
+    "event_recall": {
+     "k": 440,
+     "n": 601,
+     "rate": 0.7321131447587355,
+     "low": 0.6953141888789608,
+     "high": 0.7659636068282129
+    },
+    "event_date_mae_days": 2.3431818181818183,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 216,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 62,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 61,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 118,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.9187096774193548,
+     "domain": 0.9995159728944821,
+     "city": 1.0,
+     "country": 1.0,
+     "founded": 0.999508116084604,
+     "headcount": 0.9941491955143832,
+     "status": 0.998547215496368
+    },
+    "gone_recommended": 2,
+    "active_startups_recommendable": 0.9283516483516484,
+    "review_items": {
+     "pairs": 246,
+     "articles": 35,
+     "links": 259
+    },
+    "stage_seconds": {
+     "ingest": 0.18353542500017284,
+     "resolve": 0.8867200049999155,
+     "classify": 0.3108433940001305,
+     "signals": 0.2667672180000409
+    },
+    "seconds": 1.8601858770002764
+   },
+   "no_review": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ],
+    "false_alerts": 0,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 1.0,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 1.0,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 0,
+    "raw_rows": 30676,
+    "er": {
+     "auto": {
+      "tp": 4974,
+      "pred": 4985,
+      "true": 5067
+     },
+     "final": {
+      "tp": 4974,
+      "pred": 4985,
+      "true": 5067
+     },
+     "review_pairs": 246,
+     "refused": 10,
+     "entities": 2571,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 4974,
+     "n": 4985,
+     "rate": 0.9977933801404213,
+     "low": 0.9960527218719873,
+     "high": 0.9987673982937842
+    },
+    "er_pair_recall": {
+     "k": 4974,
+     "n": 5067,
+     "rate": 0.9816459443457667,
+     "low": 0.9775685480691793,
+     "high": 0.9849935639084458
+    },
+    "er_pair_recall_after_review": {
+     "k": 4974,
+     "n": 5067,
+     "rate": 0.9816459443457667,
+     "low": 0.9775685480691793,
+     "high": 0.9849935639084458
+    },
+    "rel_precision": {
+     "k": 2574,
+     "n": 2626,
+     "rate": 0.9801980198019802,
+     "low": 0.9741257650351677,
+     "high": 0.984867354550438
+    },
+    "rel_auto_share": 1.0,
+    "rel_review_share": 0.0,
+    "rel_cost_per_record_eur": 0.0008879341964965726,
+    "rel_accuracy_final": {
+     "k": 2574,
+     "n": 2626,
+     "rate": 0.9801980198019802,
+     "low": 0.9741257650351677,
+     "high": 0.984867354550438
+    },
+    "rel_by_tier": {
+     "cheap": 441,
+     "rule": 1720,
+     "expensive": 465
+    },
+    "rel_precision_ambiguous": {
+     "k": 410,
+     "n": 454,
+     "rate": 0.9030837004405287,
+     "low": 0.872391843873355,
+     "high": 0.927011268469429
+    },
+    "rel_precision_german": {
+     "k": 479,
+     "n": 485,
+     "rate": 0.9876288659793815,
+     "low": 0.9732753151028912,
+     "high": 0.9943182775864381
+    },
+    "link_precision": {
+     "k": 1858,
+     "n": 1915,
+     "rate": 0.9702349869451697,
+     "low": 0.9616317457684138,
+     "high": 0.976955368457169
+    },
+    "link_coverage": 0.7292460015232293,
+    "events": {
+     "predicted": 459,
+     "true": 601,
+     "matched": 440
+    },
+    "event_precision": {
+     "k": 440,
+     "n": 459,
+     "rate": 0.9586056644880174,
+     "low": 0.9362562654913367,
+     "high": 0.9733421802836326
+    },
+    "event_recall": {
+     "k": 440,
+     "n": 601,
+     "rate": 0.7321131447587355,
+     "low": 0.6953141888789608,
+     "high": 0.7659636068282129
+    },
+    "event_date_mae_days": 2.356818181818182,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 216,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 62,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 63,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 118,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.9183848797250859,
+     "domain": 0.9995159728944821,
+     "city": 1.0,
+     "country": 1.0,
+     "founded": 0.999508116084604,
+     "headcount": 0.9941491955143832,
+     "status": 0.9990328820116054
+    },
+    "gone_recommended": 2,
+    "active_startups_recommendable": 0.9287912087912088,
+    "review_items": {
+     "pairs": 0,
+     "articles": 0,
+     "links": 0
+    },
+    "stage_seconds": {
+     "ingest": 0.17212643399989247,
+     "resolve": 0.9842136500001288,
+     "classify": 0.37305890999959956,
+     "signals": 0.2398731759999464
+    },
+    "seconds": 1.9747911429999476
+   },
+   "no_backfill": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ],
+    "false_alerts": 0,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 0.9851308485329104,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 0.9371667936024372,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 0,
+    "raw_rows": 30436,
+    "er": {
+     "auto": {
+      "tp": 4974,
+      "pred": 4985,
+      "true": 5067
+     },
+     "final": {
+      "tp": 5042,
+      "pred": 5053,
+      "true": 5067
+     },
+     "review_pairs": 246,
+     "refused": 10,
+     "entities": 2506,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 4974,
+     "n": 4985,
+     "rate": 0.9977933801404213,
+     "low": 0.9960527218719873,
+     "high": 0.9987673982937842
+    },
+    "er_pair_recall": {
+     "k": 4974,
+     "n": 5067,
+     "rate": 0.9816459443457667,
+     "low": 0.9775685480691793,
+     "high": 0.9849935639084458
+    },
+    "er_pair_recall_after_review": {
+     "k": 5042,
+     "n": 5067,
+     "rate": 0.9950661140714426,
+     "low": 0.9927263530396024,
+     "high": 0.9966557645165837
+    },
+    "rel_precision": {
+     "k": 2413,
+     "n": 2439,
+     "rate": 0.989339893398934,
+     "low": 0.984425784836937,
+     "high": 0.9927149352162995
+    },
+    "rel_auto_share": 0.9910605444941081,
+    "rel_review_share": 0.008939455505891914,
+    "rel_cost_per_record_eur": 0.000891278992279561,
+    "rel_accuracy_final": {
+     "k": 2435,
+     "n": 2461,
+     "rate": 0.9894351889475823,
+     "low": 0.9845646021487908,
+     "high": 0.9927801489297368
+    },
+    "rel_by_tier": {
+     "cheap": 415,
+     "rule": 1607,
+     "expensive": 417,
+     "person": 22
+    },
+    "rel_precision_ambiguous": {
+     "k": 386,
+     "n": 406,
+     "rate": 0.9507389162561576,
+     "low": 0.9251399919047544,
+     "high": 0.9678879486459363
+    },
+    "rel_precision_german": {
+     "k": 446,
+     "n": 448,
+     "rate": 0.9955357142857143,
+     "low": 0.9838703430328064,
+     "high": 0.9987749025576838
+    },
+    "link_precision": {
+     "k": 1955,
+     "n": 2011,
+     "rate": 0.9721531576330183,
+     "low": 0.9640123376639838,
+     "high": 0.9784935149052703
+    },
+    "link_coverage": 0.8171475010158472,
+    "events": {
+     "predicted": 454,
+     "true": 601,
+     "matched": 438
+    },
+    "event_precision": {
+     "k": 438,
+     "n": 454,
+     "rate": 0.9647577092511013,
+     "low": 0.9435233633946147,
+     "high": 0.9781927934596335
+    },
+    "event_recall": {
+     "k": 438,
+     "n": 601,
+     "rate": 0.7287853577371048,
+     "low": 0.6918707916619701,
+     "high": 0.7627937023146346
+    },
+    "event_date_mae_days": 2.557077625570776,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 214,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 61,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 61,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 118,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.9187096774193548,
+     "domain": 0.9995159728944821,
+     "city": 1.0,
+     "country": 1.0,
+     "founded": 0.999508116084604,
+     "headcount": 0.9936616284739151,
+     "status": 0.9990314769975787
+    },
+    "gone_recommended": 2,
+    "active_startups_recommendable": 0.9287912087912088,
+    "review_items": {
+     "pairs": 246,
+     "articles": 22,
+     "links": 239
+    },
+    "stage_seconds": {
+     "ingest": 0.13419287299984717,
+     "resolve": 0.9092691350001587,
+     "classify": 0.4131835489997684,
+     "signals": 0.2721555790003549
+    },
+    "seconds": 2.0201904569998987
+   },
+   "ingestion_dates": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ],
+    "false_alerts": 0,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 1.0,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 1.0,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 0,
+    "raw_rows": 30676,
+    "er": {
+     "auto": {
+      "tp": 4974,
+      "pred": 4985,
+      "true": 5067
+     },
+     "final": {
+      "tp": 5042,
+      "pred": 5053,
+      "true": 5067
+     },
+     "review_pairs": 246,
+     "refused": 10,
+     "entities": 2506,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 4974,
+     "n": 4985,
+     "rate": 0.9977933801404213,
+     "low": 0.9960527218719873,
+     "high": 0.9987673982937842
+    },
+    "er_pair_recall": {
+     "k": 4974,
+     "n": 5067,
+     "rate": 0.9816459443457667,
+     "low": 0.9775685480691793,
+     "high": 0.9849935639084458
+    },
+    "er_pair_recall_after_review": {
+     "k": 5042,
+     "n": 5067,
+     "rate": 0.9950661140714426,
+     "low": 0.9927263530396024,
+     "high": 0.9966557645165837
+    },
+    "rel_precision": {
+     "k": 2574,
+     "n": 2601,
+     "rate": 0.9896193771626297,
+     "low": 0.9849385340925466,
+     "high": 0.9928560465836832
+    },
+    "rel_auto_share": 0.9904798172124905,
+    "rel_review_share": 0.00952018278750952,
+    "rel_cost_per_record_eur": 0.0008879341964965726,
+    "rel_accuracy_final": {
+     "k": 2599,
+     "n": 2626,
+     "rate": 0.9897182025894897,
+     "low": 0.9850815235558297,
+     "high": 0.9929241479644628
+    },
+    "rel_by_tier": {
+     "cheap": 441,
+     "rule": 1720,
+     "expensive": 440,
+     "person": 25
+    },
+    "rel_precision_ambiguous": {
+     "k": 410,
+     "n": 431,
+     "rate": 0.951276102088167,
+     "low": 0.9266647719372486,
+     "high": 0.967913851635105
+    },
+    "rel_precision_german": {
+     "k": 479,
+     "n": 481,
+     "rate": 0.9958419958419958,
+     "low": 0.9849674627315049,
+     "high": 0.9988590076043738
+    },
+    "link_precision": {
+     "k": 2094,
+     "n": 2154,
+     "rate": 0.9721448467966574,
+     "low": 0.9643103162511162,
+     "high": 0.9782982607639901
+    },
+    "link_coverage": 0.8202589489718203,
+    "events": {
+     "predicted": 456,
+     "true": 601,
+     "matched": 440
+    },
+    "event_precision": {
+     "k": 440,
+     "n": 456,
+     "rate": 0.9649122807017544,
+     "low": 0.9437676969806362,
+     "high": 0.9782889416531889
+    },
+    "event_recall": {
+     "k": 440,
+     "n": 601,
+     "rate": 0.7321131447587355,
+     "low": 0.6953141888789608,
+     "high": 0.7659636068282129
+    },
+    "event_date_mae_days": 19.152272727272727,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 216,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 61,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 61,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 118,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.9187096774193548,
+     "domain": 0.9995159728944821,
+     "city": 1.0,
+     "country": 1.0,
+     "founded": 0.999508116084604,
+     "headcount": 0.9941491955143832,
+     "status": 0.9990314769975787
+    },
+    "gone_recommended": 2,
+    "active_startups_recommendable": 0.9287912087912088,
+    "review_items": {
+     "pairs": 246,
+     "articles": 25,
+     "links": 256
+    },
+    "stage_seconds": {
+     "ingest": 0.15828109499989296,
+     "resolve": 0.9712365850000424,
+     "classify": 0.5068712010001946,
+     "signals": 0.26174550199993973
+    },
+    "seconds": 2.1563999229997535
+   },
+   "missing_as_zero": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ],
+    "false_alerts": 0,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 0.9851308485329104,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 0.9371667936024372,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 0,
+    "raw_rows": 30436,
+    "er": {
+     "auto": {
+      "tp": 4974,
+      "pred": 4985,
+      "true": 5067
+     },
+     "final": {
+      "tp": 5042,
+      "pred": 5053,
+      "true": 5067
+     },
+     "review_pairs": 246,
+     "refused": 10,
+     "entities": 2506,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 4974,
+     "n": 4985,
+     "rate": 0.9977933801404213,
+     "low": 0.9960527218719873,
+     "high": 0.9987673982937842
+    },
+    "er_pair_recall": {
+     "k": 4974,
+     "n": 5067,
+     "rate": 0.9816459443457667,
+     "low": 0.9775685480691793,
+     "high": 0.9849935639084458
+    },
+    "er_pair_recall_after_review": {
+     "k": 5042,
+     "n": 5067,
+     "rate": 0.9950661140714426,
+     "low": 0.9927263530396024,
+     "high": 0.9966557645165837
+    },
+    "rel_precision": {
+     "k": 2413,
+     "n": 2439,
+     "rate": 0.989339893398934,
+     "low": 0.984425784836937,
+     "high": 0.9927149352162995
+    },
+    "rel_auto_share": 0.9910605444941081,
+    "rel_review_share": 0.008939455505891914,
+    "rel_cost_per_record_eur": 0.000891278992279561,
+    "rel_accuracy_final": {
+     "k": 2435,
+     "n": 2461,
+     "rate": 0.9894351889475823,
+     "low": 0.9845646021487908,
+     "high": 0.9927801489297368
+    },
+    "rel_by_tier": {
+     "cheap": 415,
+     "rule": 1607,
+     "expensive": 417,
+     "person": 22
+    },
+    "rel_precision_ambiguous": {
+     "k": 386,
+     "n": 406,
+     "rate": 0.9507389162561576,
+     "low": 0.9251399919047544,
+     "high": 0.9678879486459363
+    },
+    "rel_precision_german": {
+     "k": 446,
+     "n": 448,
+     "rate": 0.9955357142857143,
+     "low": 0.9838703430328064,
+     "high": 0.9987749025576838
+    },
+    "link_precision": {
+     "k": 1955,
+     "n": 2011,
+     "rate": 0.9721531576330183,
+     "low": 0.9640123376639838,
+     "high": 0.9784935149052703
+    },
+    "link_coverage": 0.8171475010158472,
+    "events": {
+     "predicted": 2304,
+     "true": 601,
+     "matched": 488
+    },
+    "event_precision": {
+     "k": 488,
+     "n": 2304,
+     "rate": 0.21180555555555555,
+     "low": 0.19560827001075154,
+     "high": 0.22896228977116762
+    },
+    "event_recall": {
+     "k": 488,
+     "n": 601,
+     "rate": 0.8119800332778702,
+     "low": 0.7787961607435947,
+     "high": 0.8412008764972299
+    },
+    "event_date_mae_days": 6.182377049180328,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 214,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 61,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 61,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 1968,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.9187096774193548,
+     "domain": 0.9995159728944821,
+     "city": 1.0,
+     "country": 1.0,
+     "founded": 0.999508116084604,
+     "headcount": 0.9936616284739151,
+     "status": 0.9990314769975787
+    },
+    "gone_recommended": 2,
+    "active_startups_recommendable": 0.9287912087912088,
+    "review_items": {
+     "pairs": 246,
+     "articles": 22,
+     "links": 239
+    },
+    "stage_seconds": {
+     "ingest": 0.13581078999959573,
+     "resolve": 0.7908853509998153,
+     "classify": 0.3117044329997043,
+     "signals": 0.266689617999873
+    },
+    "seconds": 1.8328603909999401
+   },
+   "no_dark_signal": {
+    "outages": [
+     {
+      "feed": "vendor_profiles",
+      "kind": "drift",
+      "start_day": 15,
+      "days": 3,
+      "hours_to_detect": 0,
+      "by": "schema"
+     },
+     {
+      "feed": "news_mentions",
+      "kind": "stop",
+      "start_day": 33,
+      "days": 5,
+      "hours_to_detect": 7,
+      "by": "freshness"
+     },
+     {
+      "feed": "register_notices",
+      "kind": "volume",
+      "start_day": 52,
+      "days": 3,
+      "hours_to_detect": null,
+      "by": null
+     },
+     {
+      "feed": "job_posts",
+      "kind": "stop",
+      "start_day": 60,
+      "days": 21,
+      "hours_to_detect": 25,
+      "by": "freshness"
+     }
+    ],
+    "false_alerts": 0,
+    "max_hours_to_detect_outage": null,
+    "completeness": {
+     "vendor_profiles": 1.0,
+     "register_notices": 0.9946524064171123,
+     "news_mentions": 1.0,
+     "job_posts": 0.7527170077628793
+    },
+    "raw_duplicates": 0,
+    "raw_rows": 30676,
+    "er": {
+     "auto": {
+      "tp": 4974,
+      "pred": 4985,
+      "true": 5067
+     },
+     "final": {
+      "tp": 5042,
+      "pred": 5053,
+      "true": 5067
+     },
+     "review_pairs": 246,
+     "refused": 10,
+     "entities": 2506,
+     "records": 6160
+    },
+    "er_pair_precision": {
+     "k": 4974,
+     "n": 4985,
+     "rate": 0.9977933801404213,
+     "low": 0.9960527218719873,
+     "high": 0.9987673982937842
+    },
+    "er_pair_recall": {
+     "k": 4974,
+     "n": 5067,
+     "rate": 0.9816459443457667,
+     "low": 0.9775685480691793,
+     "high": 0.9849935639084458
+    },
+    "er_pair_recall_after_review": {
+     "k": 5042,
+     "n": 5067,
+     "rate": 0.9950661140714426,
+     "low": 0.9927263530396024,
+     "high": 0.9966557645165837
+    },
+    "rel_precision": {
+     "k": 2574,
+     "n": 2601,
+     "rate": 0.9896193771626297,
+     "low": 0.9849385340925466,
+     "high": 0.9928560465836832
+    },
+    "rel_auto_share": 0.9904798172124905,
+    "rel_review_share": 0.00952018278750952,
+    "rel_cost_per_record_eur": 0.0008879341964965726,
+    "rel_accuracy_final": {
+     "k": 2599,
+     "n": 2626,
+     "rate": 0.9897182025894897,
+     "low": 0.9850815235558297,
+     "high": 0.9929241479644628
+    },
+    "rel_by_tier": {
+     "cheap": 441,
+     "rule": 1720,
+     "expensive": 440,
+     "person": 25
+    },
+    "rel_precision_ambiguous": {
+     "k": 410,
+     "n": 431,
+     "rate": 0.951276102088167,
+     "low": 0.9266647719372486,
+     "high": 0.967913851635105
+    },
+    "rel_precision_german": {
+     "k": 479,
+     "n": 481,
+     "rate": 0.9958419958419958,
+     "low": 0.9849674627315049,
+     "high": 0.9988590076043738
+    },
+    "link_precision": {
+     "k": 2094,
+     "n": 2154,
+     "rate": 0.9721448467966574,
+     "low": 0.9643103162511162,
+     "high": 0.9782982607639901
+    },
+    "link_coverage": 0.8202589489718203,
+    "events": {
+     "predicted": 452,
+     "true": 601,
+     "matched": 436
+    },
+    "event_precision": {
+     "k": 436,
+     "n": 452,
+     "rate": 0.9646017699115044,
+     "low": 0.9432768975066895,
+     "high": 0.9780957898478652
+    },
+    "event_recall": {
+     "k": 436,
+     "n": 601,
+     "rate": 0.7254575707154742,
+     "low": 0.6884298831255017,
+     "high": 0.7596213091205343
+    },
+    "event_date_mae_days": 3.4610091743119265,
+    "events_by_kind": {
+     "funding": {
+      "predicted": 216,
+      "true": 304
+     },
+     "acquisition": {
+      "predicted": 61,
+      "true": 61
+     },
+     "shutdown": {
+      "predicted": 57,
+      "true": 64
+     },
+     "headcount": {
+      "predicted": 118,
+      "true": 172
+     }
+    },
+    "golden_accuracy": {
+     "name": 0.9187096774193548,
+     "domain": 0.9995159728944821,
+     "city": 1.0,
+     "country": 1.0,
+     "founded": 0.999508116084604,
+     "headcount": 0.9941491955143832,
+     "status": 0.9990295972828724
+    },
+    "gone_recommended": 2,
+    "active_startups_recommendable": 0.9287912087912088,
+    "review_items": {
+     "pairs": 246,
+     "articles": 25,
+     "links": 256
+    },
+    "stage_seconds": {
+     "ingest": 0.16101265599991166,
+     "resolve": 0.9016323859996191,
+     "classify": 0.40059334200032026,
+     "signals": 0.32759850200000074
+    },
+    "seconds": 2.031481256999996
+   }
+  }
+ ]
+}

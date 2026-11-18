@@ -42,7 +42,7 @@ def ci(row: dict[str, Any], k: str, digits: int = 3, pct: bool = True) -> str:
 
 def hours(row: dict[str, Any]) -> str:
     x = row["max_hours_to_detect_outage"]
-    return "never (drift unseen)" if x["mean"] is None else f"{x['mean']:.0f} h"
+    return "an outage missed" if x["mean"] is None else f"{x['mean']:.0f} h"
 
 
 def table(head: list[str], rows: list[list[str]]) -> str:

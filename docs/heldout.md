@@ -8,4 +8,4 @@
 
 | world | seed | declared | run |
 |---|---|---|---|
-| heldout | 977 | with the first commit | see `reports/heldout.lock` |
+| heldout | 977 | with the first commit | 2026-11-18, once; 5 of 7 gates passed (outage detection and gone-in-recommendations failed, see README) |
