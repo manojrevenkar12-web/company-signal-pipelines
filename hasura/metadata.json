@@ -50,7 +50,12 @@
         }
        }
       }
-     ]
+     ],
+     "configuration": {
+      "custom_name": "companies",
+      "custom_root_fields": {},
+      "column_config": {}
+     }
     },
     {
      "table": {
@@ -83,7 +88,12 @@
         }
        }
       }
-     ]
+     ],
+     "configuration": {
+      "custom_name": "company_signals",
+      "custom_root_fields": {},
+      "column_config": {}
+     }
     },
     {
      "table": {
@@ -130,7 +140,12 @@
         }
        }
       }
-     ]
+     ],
+     "configuration": {
+      "custom_name": "relationships",
+      "custom_root_fields": {},
+      "column_config": {}
+     }
     },
     {
      "table": {
@@ -163,7 +178,12 @@
         }
        }
       }
-     ]
+     ],
+     "configuration": {
+      "custom_name": "recommendable_startups",
+      "custom_root_fields": {},
+      "column_config": {}
+     }
     },
     {
      "table": {
@@ -180,7 +200,12 @@
         "allow_aggregations": true
        }
       }
-     ]
+     ],
+     "configuration": {
+      "custom_name": "feed_health",
+      "custom_root_fields": {},
+      "column_config": {}
+     }
     },
     {
      "table": {
@@ -197,7 +222,12 @@
         "allow_aggregations": true
        }
       }
-     ]
+     ],
+     "configuration": {
+      "custom_name": "classification_cost",
+      "custom_root_fields": {},
+      "column_config": {}
+     }
     }
    ],
    "configuration": {
