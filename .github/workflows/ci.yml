@@ -1,0 +1,107 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      PYTHONPATH: src:.
+      SIGNALS_TEST_ADMIN_DSN: postgresql://postgres:postgres@localhost:5432/postgres
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Lint and types
+        run: |
+          ruff check src evals world tests scripts
+          mypy
+      - name: Tests (unit, pipeline, Postgres, API, Dagster)
+        run: pytest -q
+      - name: README results match the committed reports
+        run: python -m evals.readme --check
+
+  warehouse:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: signals
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 20
+      hasura:
+        image: hasura/graphql-engine:v2.48.5
+        env:
+          HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:postgres@postgres:5432/signals
+          HASURA_GRAPHQL_ADMIN_SECRET: ci-admin-secret
+          HASURA_GRAPHQL_ENABLE_CONSOLE: "false"
+        ports: ["8080:8080"]
+    env:
+      PYTHONPATH: src:.
+      SIGNALS_DSN: postgresql://postgres:postgres@localhost:5432/signals
+      PGHOST: localhost
+      PGPORT: "5432"
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: signals
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: dbt in its own environment
+        run: python -m venv .dbtvenv && .dbtvenv/bin/pip install -q dbt-core==1.12.7 dbt-postgres==1.11.0
+      - name: Landing files -> raw -> core (Postgres agrees with the in-memory run)
+        run: python -m evals.demo --reset
+      - name: dbt build (staging, marts, tests)
+        run: cd dbt && ../.dbtvenv/bin/dbt build --profiles-dir .
+      - name: Hasura metadata applies and the scout role reads the marts
+        env:
+          HASURA_URL: http://localhost:8080
+          HASURA_ADMIN_SECRET: ci-admin-secret
+        run: python scripts/hasura_apply.py
+      - name: Dagster definitions load
+        run: dagster definitions validate -m signals.orchestration
+
+  console:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t company-signal-pipelines .
+      - name: The image imports the package and lists its CLI
+        run: docker run --rm company-signal-pipelines python -c "import signals.cli, signals.pipeline; print('ok')"

@@ -1,0 +1,214 @@
+{
+ "version": 3,
+ "sources": [
+  {
+   "name": "default",
+   "kind": "postgres",
+   "tables": [
+    {
+     "table": {
+      "schema": "analytics",
+      "name": "companies"
+     },
+     "select_permissions": [
+      {
+       "role": "scout",
+       "permission": {
+        "columns": "*",
+        "filter": {},
+        "limit": 500,
+        "allow_aggregations": true
+       }
+      }
+     ],
+     "array_relationships": [
+      {
+       "name": "signals",
+       "using": {
+        "manual_configuration": {
+         "remote_table": {
+          "schema": "analytics",
+          "name": "company_signals"
+         },
+         "column_mapping": {
+          "entity_id": "entity_id"
+         }
+        }
+       }
+      },
+      {
+       "name": "partners",
+       "using": {
+        "manual_configuration": {
+         "remote_table": {
+          "schema": "analytics",
+          "name": "relationships"
+         },
+         "column_mapping": {
+          "entity_id": "startup_entity"
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "table": {
+      "schema": "analytics",
+      "name": "company_signals"
+     },
+     "select_permissions": [
+      {
+       "role": "scout",
+       "permission": {
+        "columns": "*",
+        "filter": {},
+        "limit": 500,
+        "allow_aggregations": true
+       }
+      }
+     ],
+     "object_relationships": [
+      {
+       "name": "company",
+       "using": {
+        "manual_configuration": {
+         "remote_table": {
+          "schema": "analytics",
+          "name": "companies"
+         },
+         "column_mapping": {
+          "entity_id": "entity_id"
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "table": {
+      "schema": "analytics",
+      "name": "relationships"
+     },
+     "select_permissions": [
+      {
+       "role": "scout",
+       "permission": {
+        "columns": "*",
+        "filter": {},
+        "limit": 500,
+        "allow_aggregations": true
+       }
+      }
+     ],
+     "object_relationships": [
+      {
+       "name": "startup",
+       "using": {
+        "manual_configuration": {
+         "remote_table": {
+          "schema": "analytics",
+          "name": "companies"
+         },
+         "column_mapping": {
+          "startup_entity": "entity_id"
+         }
+        }
+       }
+      },
+      {
+       "name": "corporate",
+       "using": {
+        "manual_configuration": {
+         "remote_table": {
+          "schema": "analytics",
+          "name": "companies"
+         },
+         "column_mapping": {
+          "corporate_entity": "entity_id"
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "table": {
+      "schema": "analytics",
+      "name": "recommendable_startups"
+     },
+     "select_permissions": [
+      {
+       "role": "scout",
+       "permission": {
+        "columns": "*",
+        "filter": {},
+        "limit": 500,
+        "allow_aggregations": true
+       }
+      }
+     ],
+     "object_relationships": [
+      {
+       "name": "company",
+       "using": {
+        "manual_configuration": {
+         "remote_table": {
+          "schema": "analytics",
+          "name": "companies"
+         },
+         "column_mapping": {
+          "entity_id": "entity_id"
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "table": {
+      "schema": "analytics",
+      "name": "feed_health"
+     },
+     "select_permissions": [
+      {
+       "role": "scout",
+       "permission": {
+        "columns": "*",
+        "filter": {},
+        "limit": 500,
+        "allow_aggregations": true
+       }
+      }
+     ]
+    },
+    {
+     "table": {
+      "schema": "analytics",
+      "name": "classification_cost"
+     },
+     "select_permissions": [
+      {
+       "role": "scout",
+       "permission": {
+        "columns": "*",
+        "filter": {},
+        "limit": 500,
+        "allow_aggregations": true
+       }
+      }
+     ]
+    }
+   ],
+   "configuration": {
+    "connection_info": {
+     "database_url": {
+      "from_env": "HASURA_GRAPHQL_DATABASE_URL"
+     },
+     "isolation_level": "read-committed",
+     "use_prepared_statements": true
+    }
+   }
+  }
+ ]
+}

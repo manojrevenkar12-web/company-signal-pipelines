@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.dbtvenv/
+landing/
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+logs/
+.tmp_dagster_home*/
+web/node_modules/
+web/dist/
+.env
+*.egg-info/

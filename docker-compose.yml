@@ -1,0 +1,56 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: signals
+      POSTGRES_DB: signals
+    ports: ["5433:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      retries: 20
+
+  demo:
+    build: .
+    depends_on:
+      postgres: {condition: service_healthy}
+    environment:
+      SIGNALS_DSN: postgresql://postgres:signals@postgres:5432/signals
+      PGHOST: postgres
+      PGPORT: "5432"
+      PGPASSWORD: signals
+    command: >
+      sh -c "python -m evals.demo --reset --landing /tmp/landing &&
+             cd dbt && /opt/dbt/bin/dbt build --profiles-dir ."
+
+  api:
+    build: .
+    depends_on:
+      demo: {condition: service_completed_successfully}
+    environment:
+      SIGNALS_DSN: postgresql://postgres:signals@postgres:5432/signals
+      SIGNALS_CORS: http://localhost:5173
+    ports: ["8000:8000"]
+
+  hasura:
+    image: hasura/graphql-engine:v2.48.5
+    depends_on:
+      demo: {condition: service_completed_successfully}
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:signals@postgres:5432/signals
+      HASURA_GRAPHQL_ADMIN_SECRET: local-admin-secret
+      HASURA_GRAPHQL_UNAUTHORIZED_ROLE: scout
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
+    ports: ["8080:8080"]
+
+  dagster:
+    build: .
+    depends_on:
+      postgres: {condition: service_healthy}
+    environment:
+      SIGNALS_DSN: postgresql://postgres:signals@postgres:5432/signals
+      PGHOST: postgres
+      PGPORT: "5432"
+      PGPASSWORD: signals
+    command: ["dagster-webserver", "-m", "signals.orchestration", "-h", "0.0.0.0", "-p", "3000"]
+    ports: ["3000:3000"]

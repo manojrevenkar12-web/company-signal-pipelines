@@ -1,0 +1,36 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: Every delivery as it arrived; keyed on (feed, source_key, payload_hash) so a redelivery adds nothing.
+    tables:
+      - name: record
+        columns:
+          - name: id
+            data_tests: [unique, not_null]
+      - name: load_run
+        columns:
+          - name: id
+            data_tests: [unique, not_null]
+          - name: status
+            data_tests:
+              - accepted_values:
+                  arguments:
+                    values: ["loaded", "quarantined"]
+  - name: core
+    schema: core
+    description: What the pipelines decided (entity resolution, links, labels, events, golden fields).
+    tables:
+      - name: entity
+      - name: entity_name
+      - name: source_record
+      - name: article
+      - name: event
+      - name: event_evidence
+      - name: field_value
+      - name: review_pair
+  - name: ops
+    schema: ops
+    tables:
+      - name: alert

@@ -1,0 +1,8 @@
+.tabs { display: flex; gap: var(--space-4); border-bottom: 1px solid var(--rule); }
+.tab { background: none; border: 0; padding: 6px 0; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tab-on { color: var(--ink); border-bottom-color: var(--ink); }
+.signals { border-collapse: collapse; width: 100%; }
+.signals th { text-align: left; font-weight: 500; color: var(--muted); font-size: var(--step--1); padding: 4px 12px 4px 0; }
+.signals td { padding: 7px 12px 7px 0; border-top: 1px solid var(--rule); }
+.lag { display: inline-grid; grid-template-columns: 90px auto; gap: 8px; align-items: center; }
+.lag-bar { height: 6px; background: var(--loaded); display: block; }

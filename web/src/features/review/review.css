@@ -1,0 +1,22 @@
+.reviewer { font-size: var(--step--1); color: var(--muted); }
+.reviewer input { font: inherit; color: var(--ink); border: 0; border-bottom: 1px solid var(--rule); background: transparent;
+  padding: 2px 4px; width: 9em; }
+.review-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-6); }
+.review-grid h2 { margin-bottom: var(--space-3); }
+.pair { background: var(--sheet); border: 1px solid var(--rule); padding: var(--space-4); }
+.field { display: grid; grid-template-columns: 90px 1fr 1fr; gap: var(--space-3); padding: 7px 0; border-top: 1px solid var(--rule); }
+.field-head { border-top: 0; font-family: var(--font-display); font-weight: 600; }
+.field-label { color: var(--muted); font-size: var(--step--1); }
+.field-differ .value { background: linear-gradient(transparent 62%, #f1dccb 62%); }
+.reason { font-size: var(--step--1); margin: var(--space-3) 0; }
+.actions { display: flex; gap: var(--space-3); }
+.articles { list-style: none; margin: 0; padding: 0; }
+.articles li { padding: var(--space-3) 0; border-top: 1px solid var(--rule); display: grid; gap: 6px; }
+.article-title { font-weight: 500; }
+.small { font-size: var(--step--1); }
+.labels { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { border: 1px solid var(--rule); background: transparent; color: var(--ink); padding: 1px 8px;
+  border-radius: var(--radius-control); font-size: var(--step--1); }
+.chip:hover { border-color: var(--ink); }
+.chip-on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+@media (max-width: 900px) { .review-grid { grid-template-columns: 1fr; } }

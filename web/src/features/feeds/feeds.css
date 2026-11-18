@@ -1,0 +1,36 @@
+.page-head { display: grid; gap: var(--space-3); margin-bottom: var(--space-5); }
+.tapes { background: var(--sheet); border: 1px solid var(--rule); padding: var(--space-4) var(--space-4) var(--space-3); }
+.tape-row, .tape-axis { display: grid; grid-template-columns: 170px 1fr; gap: var(--space-4); align-items: center; }
+.tape-row + .tape-row { margin-top: var(--space-3); }
+.tape-label h3 { font-size: var(--step-0); }
+.tape-label span { font-size: var(--step--1); }
+.tape { position: relative; display: grid; gap: 2px; height: 34px; align-items: stretch; }
+.cell { display: block; transform-origin: bottom; border-radius: 1px; }
+.cell-loaded { background: var(--loaded); }
+.cell-backfill { background: var(--backfill); }
+.cell-quarantined { background: var(--quarantine); }
+.cell-missing { background: transparent; box-shadow: inset 0 0 0 1px var(--rule); }
+.cell-off { background: transparent; border-bottom: 1px solid var(--rule); height: 0; align-self: end; }
+.alert-pin {
+  position: absolute; top: -9px; width: 0; height: 0; transform: translateX(-4px);
+  border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 7px solid var(--quarantine);
+}
+.tape-axis { margin-top: var(--space-2); }
+.axis { position: relative; height: 18px; font-size: var(--step--1); color: var(--muted); }
+.axis span { position: absolute; top: 0; white-space: nowrap; }
+.hover-line { margin-top: var(--space-3); font-size: var(--step--1); color: var(--muted); min-height: 1.5em; }
+.two-col { display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-6); margin-top: var(--space-6); }
+.two-col h2 { margin-bottom: var(--space-3); }
+.alert-log { list-style: none; padding: 0; margin: 0; }
+.alert-log li { display: grid; grid-template-columns: 110px 1fr; gap: var(--space-3); padding: var(--space-2) 0;
+  border-top: 1px solid var(--rule); }
+.figures { border-collapse: collapse; width: 100%; }
+.figures th { text-align: left; font-weight: 500; color: var(--muted); font-size: var(--step--1); padding: 4px 8px 4px 0; }
+.figures td { padding: 6px 8px 6px 0; border-top: 1px solid var(--rule); }
+.figures td.num { text-align: right; }
+.figures th:not(:first-child) { text-align: right; }
+.note { font-size: var(--step--1); margin-top: var(--space-2); }
+@media (max-width: 900px) {
+  .two-col { grid-template-columns: 1fr; }
+  .tape-row, .tape-axis { grid-template-columns: 1fr; gap: var(--space-2); }
+}

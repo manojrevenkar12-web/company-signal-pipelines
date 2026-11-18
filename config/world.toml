@@ -1,0 +1,54 @@
+# The simulated data market (development). Only world/ and evals/ read this file.
+name = "dev"
+seed = 11
+dev_seeds = [11, 12, 13]
+startups = 2400
+corporates = 90
+days = 84
+start = "2026-06-01"
+
+[names]
+legal_suffix = 0.55        # "GmbH", "Inc." added or dropped between sources
+umlaut_transliteration = 0.35
+typo = 0.05
+rebrand = 0.02             # renamed company; the old name lingers in one source
+www_or_path_domain = 0.25
+shared_generic_name = 0.03 # distinct companies with near-identical names ("Nova Robotics")
+
+[vendor]
+coverage = 0.82
+headcount_noise = 0.18
+funding_announce_lag_days = [3, 45]
+duplicate_delivery = 0.02
+date_is_entry_date = 0.1  # the vendor stores the day it added a round instead of the announcement
+
+[register]
+coverage_dach = 0.97
+dach_share = 0.45
+
+[news]
+mentions_per_relationship = [1, 3]
+ambiguous_share = 0.25     # wording that does not name the relationship type
+german_share = 0.15
+noise_mentions = 0.20      # articles naming both companies without any relationship
+unseen_phrasing_share = 0.0  # wording no rule was written against (held-out only)
+
+[jobs]
+weekly_noise = 0.25
+
+[events]
+funding_rate = 0.12
+acquisition_rate = 0.03
+shutdown_rate = 0.025
+
+[outages]
+# (feed, start day, length in days, kind): stop = no rows, drift = renamed field, volume = 80% fewer rows
+plan = [["vendor_profiles", 23, 4, "stop"], ["news_mentions", 47, 3, "volume"], ["register_notices", 61, 2, "drift"], ["job_posts", 35, 14, "stop"]]
+
+[models]
+# Simulated LLM behaviour (assumptions, stated in docs/assumptions.md).
+cheap_accuracy_clear = 0.93
+cheap_accuracy_ambiguous = 0.70
+expensive_accuracy_clear = 0.985
+expensive_accuracy_ambiguous = 0.88
+tokens_per_snippet = [180, 420]

@@ -1,0 +1,42 @@
+# Release gates for the pipelines, judged on the worse end of a 95% interval where a rate is involved.
+[gates.er_precision]
+metric = "er_pair_precision"
+direction = "min"
+threshold = 0.98
+why = "A wrong merge mixes two companies' funding and partners; it is worse than a missed one."
+
+[gates.er_recall]
+metric = "er_pair_recall"
+direction = "min"
+threshold = 0.85
+why = "Duplicates that slip through split a company's signals and clutter search."
+
+[gates.relationship_precision]
+metric = "rel_precision"
+direction = "min"
+threshold = 0.90
+why = "Relationship types drive PoC tracking and recommendations; a mislabelled acquisition is visible to customers."
+
+[gates.cost_per_record]
+metric = "rel_cost_per_record_eur"
+direction = "max"
+threshold = 0.004
+why = "Classifying the backlog and the daily inflow must stay within budget."
+
+[gates.outage_detection]
+metric = "max_hours_to_detect_outage"
+direction = "max"
+threshold = 36
+why = "A feed that stops must alert within about a day and a half, not when a customer notices."
+
+[gates.event_date_error]
+metric = "event_date_mae_days"
+direction = "max"
+threshold = 7
+why = "Signals are sorted and alerted by date; a funding round dated by ingestion is weeks late."
+
+[gates.gone_in_recommendations]
+metric = "gone_recommended"
+direction = "max"
+threshold = 0
+why = "Recommending a startup that was acquired or shut down a week or more ago embarrasses the customer."

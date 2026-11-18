@@ -1,0 +1,73 @@
+# Designs compared on the same luck. Each one overrides [platform] in config/pipelines.toml.
+# Only evals/ reads this file.
+
+[status_quo]
+label = "Status quo: append loads, weekly look, exact names, keyword rules, ingestion dates"
+idempotent_loads = false
+monitors = false
+backfill = false
+er_method = "exact"
+er_use_aliases = false
+classification = "rules"
+review_queue = false
+event_dates = "ingestion"
+dedupe_events = false
+missing_weeks = "zero"
+status_filter = false
+dark_signal = false
+provenance = "last_write"
+
+[model_alone]
+label = "Model alone: every article to the large model, its label accepted"
+classification = "expensive"
+review_queue = false
+
+[cheap_model_alone]
+label = "Small model alone: every article to the small model, its label accepted"
+classification = "cheap"
+review_queue = false
+
+[platform]
+label = "Platform: idempotent loads, monitors, backfills, weighted resolution, cascade, evidence dates"
+
+# Ablations: the platform with one part removed.
+[no_aliases]
+label = "Platform without register name history"
+er_use_aliases = false
+
+[no_renormalise]
+label = "Platform without renormalised weights (a missing field scores zero)"
+er_renormalise = false
+
+[no_transliteration]
+label = "Platform without umlaut transliteration"
+er_transliterate = false
+
+[fuzzy_name_only]
+label = "Platform with name-only fuzzy matching"
+er_method = "fuzzy_name"
+
+[no_rules]
+label = "Platform without the rule tier (every article starts at the small model)"
+cascade_rules = false
+
+[no_review]
+label = "Platform without the review queue (low-confidence labels accepted)"
+review_queue = false
+
+[no_backfill]
+label = "Platform without backfills"
+backfill = false
+
+[ingestion_dates]
+label = "Platform dating events by ingestion"
+event_dates = "ingestion"
+
+[missing_as_zero]
+label = "Platform without backfills, counting a missing week of job posts as zero"
+backfill = false
+missing_weeks = "zero"
+
+[no_dark_signal]
+label = "Platform without the jobs-feed shutdown signal"
+dark_signal = false

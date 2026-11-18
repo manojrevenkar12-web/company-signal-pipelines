@@ -1,0 +1,118 @@
+# Product settings. The world never reads this file.
+
+[feeds.vendor_profiles]
+description = "Company profiles from a commercial data vendor (Crunchbase/Dealroom-like): names, domains, HQ, headcount, funding rounds."
+sla_hours = 30            # a daily feed; alert if no successful load for longer
+cost_per_record_eur = 0.020
+key = "vendor_id"
+cadence_days = 1
+required = ["vendor_id", "name", "domain", "country", "city", "founded_year", "headcount", "status", "funding_rounds"]
+
+[feeds.register_notices]
+description = "German company-register notices (Handelsregister): new entries, mergers, liquidations, insolvencies. German text."
+sla_hours = 30
+cost_per_record_eur = 0.004
+key = "notice_id"
+cadence_days = 1
+required = ["notice_id", "court", "register_no", "company_name", "seat", "country", "published_on", "kind", "text"]
+
+[feeds.news_mentions]
+description = "Scraped news and press releases that mention a corporate and a startup together."
+sla_hours = 30
+cost_per_record_eur = 0.001
+key = "url"
+cadence_days = 1
+required = ["url", "published_on", "language", "title", "text"]
+
+[feeds.job_posts]
+description = "Weekly count of open job posts per company domain from a jobs scraper."
+sla_hours = 192           # weekly
+cost_per_record_eur = 0.0005
+key = "post_week_domain"
+cadence_days = 7
+required = ["post_week_domain", "week_start", "domain", "open_posts"]
+
+[monitors]
+delivery_hour = 6         # feeds deliver at 06:00; freshness is checked every hour
+weekly_look_hour = 9      # without monitors, someone looks at the week's loads on Monday 09:00
+volume_window = 14
+volume_z = 3.0            # a drop below this robust z of the trailing loads alerts (scale at least 20% of the median)
+volume_min_history = 7
+null_rate_jump = 0.20     # a field's null rate rising by more than this vs trailing median
+duplicate_rate_max = 0.05  # repeated keys inside one delivery; idempotent keys absorb them, the alert is for the vendor
+
+[resolution]
+auto_merge = 0.90         # pair score at or above: merge
+review_low = 0.82         # between review_low and auto_merge: review queue (set on dev seed 11: below it a pair was a different company 98 times in 100)
+# Weights are renormalised over the fields both records have (a register notice has no domain).
+name_weight = 0.50
+domain_weight = 0.30
+city_weight = 0.10
+country_weight = 0.05
+founded_weight = 0.05
+bridge_score = 0.95        # a job-board domain whose stem is exactly one register name, and that name has only that domain
+
+[classification]
+labels = ["mention", "partnership", "poc", "implementation", "investment", "acquisition", "none"]
+rule_confidence = 0.95
+cheap_accept = 0.85       # cheap model's self-reported confidence needed to accept without escalation
+expensive_accept = 0.70   # below this, the record goes to the review queue
+cheap_eur_per_1k_tokens = 0.0008
+expensive_eur_per_1k_tokens = 0.0150
+
+[linking]
+review_max_candidates = 5   # an article that could be about up to this many startups goes to a person; more is left unlinked
+
+[signals]
+headcount_change_min = 0.35   # a 35% change in the four-week job-post mean (set on dev seed 11: at 15% weekly noise fired six times more often than real changes)
+headcount_min_weeks = 4
+headcount_min_posts = 3.0     # below this many open posts a week the trend is noise
+event_merge_days = 21
+dark_weeks = 2               # gone from the jobs feed this many delivered weeks in a row: a shutdown signal         # events of the same kind for a company within this window are one event
+
+[fields]
+# Source priority per field when several sources disagree (first wins, then fresher, then more confident).
+name = ["crm", "register_notices", "vendor_profiles"]
+domain = ["crm", "vendor_profiles"]
+city = ["register_notices", "vendor_profiles", "crm"]
+country = ["register_notices", "vendor_profiles", "crm"]
+founded = ["vendor_profiles"]
+headcount = ["vendor_profiles"]
+status = ["register_notices", "news_mentions", "vendor_profiles", "job_posts"]
+max_age_days = { name = 365, domain = 180, headcount = 90, status = 30 }
+
+[platform]
+# The production switches. Designs in config/designs.toml override these to compare on the same luck.
+idempotent_loads = true     # raw rows keyed on (feed, source key, payload hash); a redelivery adds nothing
+monitors = true             # freshness, volume, schema, null-rate and duplicate checks with alerts
+backfill = true             # after an outage or a quarantined load, request the missed days again
+er_method = "weighted"      # exact | fuzzy_name | weighted
+er_use_aliases = true       # register name changes give a company its old names
+er_renormalise = true       # weights over the fields both records have
+er_transliterate = true     # ä -> ae before comparing
+er_domain_identifier = true # an equal normalised domain decides a match
+classification = "cascade"  # rules | cheap | expensive | cascade
+cascade_rules = true
+review_queue = true         # low-confidence labels and doubtful pairs go to a person instead of being accepted
+event_dates = "evidence"    # evidence (earliest credible stated date) | ingestion (day first seen)
+dedupe_events = true
+missing_weeks = "gap"       # gap (a missing week is unknown) | zero (a missing week counts as zero posts)
+status_filter = true        # recommendable view excludes acquired and shut-down companies
+dark_signal = true          # a company gone from the jobs feed is a shutdown signal
+provenance = "priority"     # priority (source order, freshness) | last_write
+
+[models]
+cheap = "claude-haiku-5-5"
+expensive = "claude-opus-5-5"
+
+[orchestration]
+start_date = "2026-06-01"     # partition 0 of the daily feeds
+schedule = "0 7 * * *"        # an hour after the 06:00 deliveries
+timezone = "Europe/Berlin"
+landing = "landing"
+dbt_project = "dbt"
+model_source = "replay"       # replay (recorded answers in landing/model_answers.json) | claude
+
+[privacy]
+personal_fields = ["founder_email"]   # delivered by the vendor, never used; dropped below raw
+raw_retention_days = 30               # personal fields are removed from raw after this many days
